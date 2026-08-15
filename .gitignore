@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+
+# Сборки и тесты
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Крупные сырые данные (не пушим):
+# полный дамп MAST (~2 МБ) и сырой MMASH-архив (~25 МБ, распаковка ~100 МБ+)
+data/raw/MAST_371_2025111002_Raw.csv
+data/raw/MMASH.zip
+data/raw/MMASH/
+
+# Временные служебные файлы
+*.log
+*.pid
+*.err
+~$*
+Thumbs.db
+.DS_Store

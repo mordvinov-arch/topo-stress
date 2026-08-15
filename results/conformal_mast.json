@@ -1,0 +1,38 @@
+{
+  "n": 371,
+  "alpha": 0.1,
+  "q_hat": 2.7914521386621542,
+  "coverage_all": 0.8840970350404312,
+  "coverage_non_calibration": 0.8760330578512396,
+  "mean_width": 5.582904277324309,
+  "target": "LogAUCg",
+  "features": [
+    "Trait_Anxiety",
+    "BMI",
+    "Age",
+    "Anxiety_change",
+    "Negative_peak",
+    "Sex_Male"
+  ],
+  "by_group": {
+    "Stress": {
+      "n": 240,
+      "coverage": 0.875,
+      "mean_width": 5.582904277324308
+    },
+    "Control": {
+      "n": 131,
+      "coverage": 0.9007633587786259,
+      "mean_width": 5.582904277324309
+    }
+  },
+  "coefs": [
+    0.11174988934820805,
+    -0.061341419051705155,
+    -0.009014911544295567,
+    0.15443396052282518,
+    0.018644554139298705,
+    -0.00225804979951803
+  ],
+  "intercept": 3.4569972101445776
+}

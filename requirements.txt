@@ -1,0 +1,12 @@
+numpy>=1.24
+scipy>=1.10
+pandas>=1.5
+scikit-learn>=1.2
+matplotlib>=3.7
+bambi>=0.13
+pymc>=5.10
+arviz>=0.17
+ripser>=0.6.4
+persim>=0.3.0
+networkx>=3.0
+python-docx>=1.1

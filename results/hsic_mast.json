@@ -1,0 +1,54 @@
+{
+  "n": 371,
+  "n_perm": 2000,
+  "results": [
+    {
+      "variable": "Cortisol_peak",
+      "hsic": 0.0006906242825744103,
+      "p_hsic": 0.03,
+      "r_pearson": 0.11145416695733414,
+      "p_pearson": 0.03185658789888507,
+      "delta_pearson_minus_hsic_p": 0.0018565878988850704
+    },
+    {
+      "variable": "LogAUCg",
+      "hsic": 0.002042668988139992,
+      "p_hsic": 0.0005,
+      "r_pearson": 0.2881124217286535,
+      "p_pearson": 1.595350492165698e-08,
+      "delta_pearson_minus_hsic_p": -0.0004999840464950784
+    },
+    {
+      "variable": "Slope_logcortisol",
+      "hsic": 0.0006733905162746423,
+      "p_hsic": 0.018,
+      "r_pearson": 0.1912885121124711,
+      "p_pearson": 0.00021028815863515302,
+      "delta_pearson_minus_hsic_p": -0.017789711841364846
+    },
+    {
+      "variable": "Anxiety_peak",
+      "hsic": 0.000620364157547351,
+      "p_hsic": 0.0365,
+      "r_pearson": 0.0802090384053262,
+      "p_pearson": 0.12302318642472788,
+      "delta_pearson_minus_hsic_p": 0.0865231864247279
+    },
+    {
+      "variable": "Negative_peak",
+      "hsic": 0.0007653283267094571,
+      "p_hsic": 0.0185,
+      "r_pearson": 0.09303926718796417,
+      "p_pearson": 0.07347003761711778,
+      "delta_pearson_minus_hsic_p": 0.05497003761711777
+    },
+    {
+      "variable": "Trait_Anxiety",
+      "hsic": 1.1412446064821965e-05,
+      "p_hsic": 0.996,
+      "r_pearson": 0.016420035621028575,
+      "p_pearson": 0.752589904495599,
+      "delta_pearson_minus_hsic_p": -0.24341009550440096
+    }
+  ]
+}

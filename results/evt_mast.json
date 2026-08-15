@@ -1,0 +1,149 @@
+{
+  "gev": {
+    "Stress": {
+      "xi": -0.09806553474316118,
+      "mu": 8.013613704625087,
+      "sigma": 5.034079515498352,
+      "tail": "Gumbel (экспоненциальный хвост)",
+      "q99": -0.2798654488311403,
+      "q999": -2.6985428803371434
+    },
+    "Control": {
+      "xi": -0.1574954365407777,
+      "mu": 6.484383762954906,
+      "sigma": 4.446199690764569,
+      "tail": "Gumbel (экспоненциальный хвост)",
+      "q99": -1.191961981979662,
+      "q999": -3.5597411517721422
+    },
+    "Pooled": {
+      "xi": -0.11452436017554417,
+      "mu": 7.456027348028674,
+      "sigma": 4.872400435833061,
+      "tail": "Gumbel (экспоненциальный хвост)",
+      "q99": -0.6753738180922371,
+      "q999": -3.084040116134111
+    }
+  },
+  "gpd": {
+    "u": 20.55,
+    "Stress": {
+      "n_exceed": 25,
+      "xi": 0.29306515695361224,
+      "scale": 4.145616941185549,
+      "rl_1e-3": 15.715071605515982,
+      "tail": "Frechet (тяжёлый хвост, склонность к экстремальным пикам)"
+    },
+    "Control": {
+      "n_exceed": 12
+    }
+  },
+  "permutation": {
+    "obs_rl99_diff": 0.9120965331485218,
+    "p_two_sided": 0.3023023023023023,
+    "p_gt": 0.15115115115115116,
+    "n_perm": 999,
+    "perm_quantiles": {
+      "q02.5": -1.9675844400762217,
+      "q50": -0.05931562133272816,
+      "q97.5": 1.7795793268013105
+    }
+  },
+  "network": {
+    "vars": [
+      "Group01",
+      "Age",
+      "BMI",
+      "Trait_Anxiety",
+      "Cortisol_peak",
+      "Cortisol_increase",
+      "LogAUCg",
+      "Slope_logcortisol",
+      "Anxiety_peak",
+      "Anxiety_change",
+      "Negative_peak",
+      "Positive_peak"
+    ],
+    "threshold": 0.25,
+    "edges": [
+      {
+        "a": "Group01",
+        "b": "LogAUCg",
+        "r": 0.29
+      },
+      {
+        "a": "Trait_Anxiety",
+        "b": "Anxiety_peak",
+        "r": 0.27
+      },
+      {
+        "a": "Trait_Anxiety",
+        "b": "Positive_peak",
+        "r": -0.34
+      },
+      {
+        "a": "Cortisol_peak",
+        "b": "Cortisol_increase",
+        "r": 0.77
+      },
+      {
+        "a": "Cortisol_peak",
+        "b": "LogAUCg",
+        "r": 0.59
+      },
+      {
+        "a": "Cortisol_peak",
+        "b": "Slope_logcortisol",
+        "r": 0.27
+      },
+      {
+        "a": "Cortisol_increase",
+        "b": "LogAUCg",
+        "r": 0.45
+      },
+      {
+        "a": "Cortisol_increase",
+        "b": "Slope_logcortisol",
+        "r": 0.63
+      },
+      {
+        "a": "LogAUCg",
+        "b": "Slope_logcortisol",
+        "r": 0.42
+      },
+      {
+        "a": "Anxiety_peak",
+        "b": "Anxiety_change",
+        "r": 0.26
+      },
+      {
+        "a": "Anxiety_peak",
+        "b": "Negative_peak",
+        "r": 0.53
+      },
+      {
+        "a": "Anxiety_peak",
+        "b": "Positive_peak",
+        "r": -0.41
+      }
+    ],
+    "corr_with_group": {
+      "Cortisol_peak": {
+        "r": 0.11145416695733414,
+        "p": 0.03185658789888507
+      },
+      "Anxiety_peak": {
+        "r": 0.0802090384053262,
+        "p": 0.12302318642472788
+      },
+      "Slope_logcortisol": {
+        "r": 0.1912885121124711,
+        "p": 0.00021028815863515302
+      },
+      "Trait_Anxiety": {
+        "r": 0.016420035621028575,
+        "p": 0.752589904495599
+      }
+    }
+  }
+}
