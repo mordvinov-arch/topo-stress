@@ -1,4 +1,4 @@
-# ===== Сборка производных датасетов MAST =====
+# Сборка производных датасетов MAST.
 # Источник: data/raw/MAST_371_2025111002_Raw_Recode.csv -> data/processed/
 #   mast_wide.csv, mast_long_cortisol.csv, mast_long_psych.csv,
 #   mast_17d.csv, mast_cortisol_5d.csv

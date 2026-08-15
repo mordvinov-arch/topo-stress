@@ -1,4 +1,4 @@
-# ===== Экспорт сводных CSV из JSON-результатов =====
+# Экспорт сводных CSV из JSON-результатов.
 # results/bayesian_summary.csv, results/hsic_results.csv, results/physiotypes.csv
 
 import csv

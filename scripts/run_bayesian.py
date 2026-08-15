@@ -1,4 +1,4 @@
-# ===== MAST: Байесовская иерархическая регрессия =====
+# MAST: байесовская иерархическая регрессия.
 # LogCortisol(t) ~ Time * Group + ковариаты + (Time | SubID) + (1 | Exp)
 # Сравнение моделей LOO + BMA-веса. Сохраняет результаты в results/bayesian_mast.json
 # и рисунок figures/bayesian_mast.png.

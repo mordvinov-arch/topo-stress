@@ -19,7 +19,7 @@ classifiers = [
 ]
 
 [project.urls]
-Repository = "https://github.com/your-name/topo-stress"
+Repository = "https://github.com/mordvinov-arch/topo-stress"
 
 [tool.setuptools.packages.find]
 where = ["src"]

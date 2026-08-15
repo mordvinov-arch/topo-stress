@@ -1,4 +1,4 @@
-# ===== MAST: сборка статьи docx из markdown =====
+# MAST: сборка статьи docx из markdown.
 # Парсит article/mast_article.md и генерирует article/mast_article.docx
 # с заголовками, абзацами, таблицами и встроенными рисунками.
 
