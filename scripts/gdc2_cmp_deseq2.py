@@ -52,12 +52,15 @@ def main():
     deseq = deseq[~deseq.index.duplicated()]
     l2fc = deseq["log2FoldChange"].dropna()
     padj = deseq["padj"].dropna()
+    sig = deseq.dropna(subset=["padj", "log2FoldChange"])
+    sig = sig[sig["padj"] < 0.05]
 
     common = list(set(genes) & set(l2fc.index) & set(pc1_loading is not None and genes))
     ldf = pd.DataFrame({"log2FC": l2fc.reindex(common),
                         "loading": pd.Series(pc1_loading, index=genes).reindex(common)}).dropna()
     r = ldf["log2FC"].corr(ldf["loading"])
-    print("n common:", len(ldf), " corr(log2FC, PC1 loading) = %.3f" % r, flush=True)
+    r_abs = abs(r)  # знак PC1 произволен (ось определена с точностью до знака)
+    print("n common:", len(ldf), " corr(log2FC, PC1 loading) = %.3f (|r| = %.3f)" % (r, r_abs), flush=True)
 
     sig_up = set(l2fc[l2fc > 1].index)
     sig_dn = set(l2fc[l2fc < -1].index)
@@ -69,11 +72,12 @@ def main():
 
     res = {
         "pc1_pve_pct": float(pve[0]),
-        "corr_log2FC_pc1loading": round(float(r), 4),
+        "corr_log2FC_pc1loading_abs": round(float(r_abs), 4),
         "jaccard_HVG_top500_deseq_padj": round(jaccard(hvg, top_padj), 4),
         "jaccard_HVG_top500_pc1load": round(jaccard(hvg, top_pc), 4),
         "jaccard_deseq_padj_topPC1": round(jaccard(top_padj, top_pc), 4),
-        "n_sig_up": int((l2fc > 1).sum()), "n_sig_down": int((l2fc < -1).sum()),
+        "n_sig_up": int((sig["log2FoldChange"] > 1).sum()),
+        "n_sig_down": int((sig["log2FoldChange"] < -1).sum()),
     }
     with open(os.path.join(RESULTS_DIR, "gdc2_cmp_deseq2.json"), "w", encoding="utf-8") as f:
         json.dump(res, f, ensure_ascii=False, indent=2)
@@ -83,7 +87,7 @@ def main():
     ax.scatter(ldf["loading"], ldf["log2FC"], s=3, alpha=0.4, c="steelblue")
     ax.axhline(0, color="k", lw=0.5); ax.axvline(0, color="k", lw=0.5)
     ax.set_xlabel("PC1 loading (all genes)"); ax.set_ylabel("DESeq2 log2FC (Tumor/Normal)")
-    ax.set_title("PC1 loadings vs DESeq2 log2FC (r=%.3f)" % r)
+    ax.set_title("PC1 loadings vs DESeq2 log2FC (|r|=%.3f)" % r_abs)
     fig.tight_layout()
     fig.savefig(os.path.join(FIGURES_DIR, "gdc2_cmp_deseq2.png"), dpi=150)
     plt.close(fig)

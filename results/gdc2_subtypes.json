@@ -1,0 +1,145 @@
+{
+  "method": "Physiotypes vs TCGA 2014 expression subtypes (TRU/PI/PP)",
+  "n_patients": 507,
+  "n_with_subtype": 221,
+  "contingency": {
+    "PI": {
+      "1": 37,
+      "2": 30,
+      "3": 7
+    },
+    "PP": {
+      "1": 42,
+      "2": 12,
+      "3": 7
+    },
+    "TRU": {
+      "1": 63,
+      "2": 21,
+      "3": 2
+    }
+  },
+  "row_percent": {
+    "PI": {
+      "1": 0.261,
+      "2": 0.476,
+      "3": 0.438
+    },
+    "PP": {
+      "1": 0.296,
+      "2": 0.19,
+      "3": 0.438
+    },
+    "TRU": {
+      "1": 0.444,
+      "2": 0.333,
+      "3": 0.125
+    }
+  },
+  "chi2": 14.44,
+  "p_chi2": 0.006008455623094393,
+  "dof": 4,
+  "ari": 0.027,
+  "dominant_subtype_by_physiotype": {
+    "1": {
+      "dominant_subtype": "TRU",
+      "dominant_share": 0.444,
+      "n": 142
+    },
+    "2": {
+      "dominant_subtype": "PI",
+      "dominant_share": 0.476,
+      "n": 63
+    },
+    "3": {
+      "dominant_subtype": "PP",
+      "dominant_share": 0.438,
+      "n": 16
+    }
+  },
+  "survival_by_subtype": {
+    "TRU": {
+      "n": 86,
+      "events": 28,
+      "median_os_days": 1830.0
+    },
+    "PI": {
+      "n": 74,
+      "events": 32,
+      "median_os_days": 1357.0
+    },
+    "PP": {
+      "n": 61,
+      "events": 31,
+      "median_os_days": 1115.0
+    }
+  },
+  "logrank_TRU_vs_PI_p": 0.0277,
+  "subtype_cox": {
+    "formula": "subtype + age_years + stage_grp",
+    "n": 214,
+    "summary": {
+      "subtype[T.PP]": {
+        "coef": 0.024,
+        "hr": 1.024,
+        "p": 0.9266
+      },
+      "subtype[T.TRU]": {
+        "coef": -0.304,
+        "hr": 0.738,
+        "p": 0.276
+      },
+      "age_years": {
+        "coef": 5.11,
+        "hr": 165.679,
+        "p": 0.2334
+      },
+      "stage_grp[T.III/IV]": {
+        "coef": 0.8,
+        "hr": 2.225,
+        "p": 0.0007
+      },
+      "stage_grp[T.NA]": {
+        "coef": -15.69,
+        "hr": 0.0,
+        "p": 0.9943
+      }
+    }
+  },
+  "physio_controlled_for_subtype_cox": {
+    "formula": "physio + subtype + age_years + stage_grp",
+    "n": 214,
+    "summary": {
+      "physio": {
+        "coef": 0.26,
+        "hr": 1.296,
+        "p": 0.0989
+      },
+      "subtype[T.PP]": {
+        "coef": 0.105,
+        "hr": 1.111,
+        "p": 0.6905
+      },
+      "subtype[T.TRU]": {
+        "coef": -0.211,
+        "hr": 0.81,
+        "p": 0.4602
+      },
+      "age_years": {
+        "coef": 4.964,
+        "hr": 143.112,
+        "p": 0.2536
+      },
+      "stage_grp[T.III/IV]": {
+        "coef": 0.826,
+        "hr": 2.284,
+        "p": 0.0005
+      },
+      "stage_grp[T.NA]": {
+        "coef": -15.683,
+        "hr": 0.0,
+        "p": 0.9942
+      }
+    }
+  }
+}

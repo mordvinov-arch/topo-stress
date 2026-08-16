@@ -1,0 +1,150 @@
+{
+  "method": "GDC LUAD: IGKC-signature survival, stage stratification, mutation Cox",
+  "n_patients": 507,
+  "n_events": 183,
+  "igkc_module_genes": [
+    "IGKC",
+    "IGKV3-20",
+    "IGKV1-5",
+    "IGKV3-11",
+    "IGKV3-15",
+    "IGHV1-18",
+    "IGLC2",
+    "IGHV5-51",
+    "IGKJ1",
+    "IGHV3-23",
+    "IGHV4-59",
+    "IGKV4-1",
+    "IGHV3-21",
+    "IGHG1",
+    "IGLV1-40",
+    "IGLV1-47",
+    "IGLV3-1",
+    "IGKV1-39",
+    "IGLV2-23",
+    "IGHJ4"
+  ],
+  "igkc_module_genes_missing": [],
+  "igkc_median": 1.4503,
+  "igkc_km": {
+    "low": {
+      "n": 254,
+      "events": 100,
+      "median_os_days": 1379.0
+    },
+    "high": {
+      "n": 253,
+      "events": 83,
+      "median_os_days": 1622.0
+    },
+    "logrank_p": 0.2753
+  },
+  "igkc_cox": {
+    "formula": "igkc + age_years + stage_grp",
+    "n": 497,
+    "summary": {
+      "igkc": {
+        "coef": -0.19,
+        "hr": 0.827,
+        "p": 0.147
+      },
+      "age_years": {
+        "coef": 3.585,
+        "hr": 36.05,
+        "p": 0.1977
+      },
+      "stage_grp[T.III/IV]": {
+        "coef": 0.913,
+        "hr": 2.492,
+        "p": 0.0
+      },
+      "stage_grp[T.NA]": {
+        "coef": -0.378,
+        "hr": 0.685,
+        "p": 0.597
+      }
+    }
+  },
+  "stage_within_physiotype": {
+    "1": {
+      "n": 327,
+      "events": 111,
+      "logrank_stage_within_physiotype_p": 0.0,
+      "median_I/II": 1830.0,
+      "median_III/IV": 711.0
+    },
+    "2": {
+      "n": 139,
+      "events": 50,
+      "logrank_stage_within_physiotype_p": 0.0001,
+      "median_I/II": 1725.0,
+      "median_III/IV": 807.0
+    },
+    "3": {
+      "n": 41,
+      "events": 22,
+      "logrank_stage_within_physiotype_p": 0.0274,
+      "median_I/II": 1288.0,
+      "median_III/IV": 976.0
+    }
+  },
+  "physiotype_within_stage_cox": {
+    "I/II": {
+      "n": 391,
+      "physio": {
+        "coef": 0.101,
+        "hr": 1.107,
+        "p": 0.4682
+      }
+    },
+    "III/IV": {
+      "n": 106,
+      "physio": {
+        "coef": 0.189,
+        "hr": 1.208,
+        "p": 0.2955
+      }
+    }
+  },
+  "mutation_cox": {
+    "formula": "physio + age_years + stage_grp + EGFR + KRAS + TP53",
+    "n": 497,
+    "summary": {
+      "physio": {
+        "coef": 0.139,
+        "hr": 1.15,
+        "p": 0.2181
+      },
+      "age_years": {
+        "coef": 5.037,
+        "hr": 153.972,
+        "p": 0.079
+      },
+      "stage_grp[T.III/IV]": {
+        "coef": 0.923,
+        "hr": 2.517,
+        "p": 0.0
+      },
+      "stage_grp[T.NA]": {
+        "coef": -0.283,
+        "hr": 0.753,
+        "p": 0.6924
+      },
+      "EGFR": {
+        "coef": 0.241,
+        "hr": 1.273,
+        "p": 0.2611
+      },
+      "KRAS": {
+        "coef": 0.335,
+        "hr": 1.397,
+        "p": 0.0624
+      },
+      "TP53": {
+        "coef": 0.227,
+        "hr": 1.255,
+        "p": 0.1583
+      }
+    }
+  }
+}

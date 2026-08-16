@@ -1,0 +1,398 @@
+{
+  "method": "GEO validation GSE31210 (GPL570)",
+  "samples": 246,
+  "tumors": 226,
+  "normals": 20,
+  "genes": 313,
+  "ig_signature_present": [
+    "IGKC",
+    "IGHG1",
+    "LTF",
+    "SPDEF",
+    "FDCSP",
+    "CCL19",
+    "BPIFA1",
+    "MUC5B",
+    "BPIFB1",
+    "IGHM",
+    "ST6GALNAC1",
+    "CXCL13",
+    "PPP1R14D",
+    "CEACAM6",
+    "IGKV1OR2-108",
+    "CXCL14"
+  ],
+  "module_genes_present": {
+    "1": [
+      "LTF",
+      "SPDEF",
+      "FDCSP",
+      "CCL19",
+      "BPIFA1",
+      "MUC5B",
+      "BPIFB1",
+      "IGHM",
+      "IGKC",
+      "ST6GALNAC1",
+      "CXCL13",
+      "PPP1R14D",
+      "CEACAM6",
+      "IGKV1OR2-108",
+      "CXCL14"
+    ],
+    "2": [
+      "KRT4",
+      "HLA-DRB6",
+      "S100A8",
+      "PEG10",
+      "CXCL5",
+      "SLC6A4",
+      "MCEMP1",
+      "NTS",
+      "HSD17B6",
+      "TNNC1",
+      "ANKRD1",
+      "FABP4",
+      "UPK1B",
+      "UPK3B",
+      "CST6",
+      "MAGEA6",
+      "CLIC5",
+      "HBB",
+      "MAGEA12",
+      "MMP28",
+      "TFPI2",
+      "SUSD2",
+      "TMEM100",
+      "LGI3",
+      "LRRK2"
+    ],
+    "3": [
+      "SLC6A4",
+      "ANKRD1",
+      "LGI3",
+      "UPK3B",
+      "CACNG4",
+      "FAM107A",
+      "FABP4",
+      "MCEMP1",
+      "CLIC5",
+      "MS4A15",
+      "HBB",
+      "RETN",
+      "TNNC1",
+      "XAGE2",
+      "KRT4",
+      "CLDN6",
+      "PRAME",
+      "NR0B1",
+      "FCN3",
+      "TMEM100",
+      "MAGEA6",
+      "AGER",
+      "MAGEA12",
+      "WIF1",
+      "HSD17B6",
+      "MARCO",
+      "UCHL1",
+      "PEG10",
+      "LHFPL3-AS2"
+    ]
+  },
+  "physiotypes": {
+    "n_clusters": 3,
+    "n_genes_sub": 200,
+    "cluster_sizes": {
+      "1": 82,
+      "2": 83,
+      "3": 61
+    }
+  },
+  "cluster_mapping_to_gdc_physiotype": {
+    "1": 2,
+    "2": 1,
+    "3": 3
+  },
+  "module_enrichment_z_by_cluster": {
+    "1": {
+      "PH1": -0.563,
+      "PH2": 0.045,
+      "PH3": 0.026
+    },
+    "2": {
+      "PH1": 0.131,
+      "PH2": -0.212,
+      "PH3": -0.175
+    },
+    "3": {
+      "PH1": 0.579,
+      "PH2": 0.228,
+      "PH3": 0.203
+    }
+  },
+  "gdc_physiotype_sizes_in_geo": {
+    "1": 83,
+    "2": 82,
+    "3": 61
+  },
+  "survival_by_physiotype_all": {
+    "1": {
+      "n": 83,
+      "events": 12,
+      "median_os_days": Infinity
+    },
+    "2": {
+      "n": 82,
+      "events": 10,
+      "median_os_days": Infinity
+    },
+    "3": {
+      "n": 61,
+      "events": 13,
+      "median_os_days": Infinity
+    },
+    "logrank_p": 0.6543814905453849
+  },
+  "survival_figure_all": "geo_validate_physio.png",
+  "rfs_by_physiotype_all": {
+    "1": {
+      "n": 83,
+      "events": 23,
+      "median_os_days": Infinity
+    },
+    "2": {
+      "n": 82,
+      "events": 20,
+      "median_os_days": Infinity
+    },
+    "3": {
+      "n": 61,
+      "events": 21,
+      "median_os_days": Infinity
+    },
+    "logrank_p": 0.6031139648487184
+  },
+  "rfs_figure_all": "geo_validate_physio.png",
+  "survival_by_physiotype_authors_excluded": {
+    "1": {
+      "n": 9,
+      "events": 3,
+      "median_os_days": Infinity
+    },
+    "2": {
+      "n": 6,
+      "events": 1,
+      "median_os_days": Infinity
+    },
+    "3": {
+      "n": 7,
+      "events": 1,
+      "median_os_days": Infinity
+    },
+    "logrank_p": 0.4101243406965641
+  },
+  "survival_figure_authors_excluded": "geo_validate_physio.png",
+  "rfs_by_physiotype_authors_excluded": {
+    "1": {
+      "n": 9,
+      "events": 5,
+      "median_os_days": 790.0
+    },
+    "2": {
+      "n": 6,
+      "events": 2,
+      "median_os_days": Infinity
+    },
+    "3": {
+      "n": 7,
+      "events": 3,
+      "median_os_days": Infinity
+    },
+    "logrank_p": 0.3718807414878066
+  },
+  "rfs_figure_authors_excluded": "geo_validate_physio.png",
+  "survival_by_physiotype_prognosis": {
+    "1": {
+      "n": 74,
+      "events": 9,
+      "median_os_days": Infinity
+    },
+    "2": {
+      "n": 76,
+      "events": 9,
+      "median_os_days": Infinity
+    },
+    "3": {
+      "n": 54,
+      "events": 12,
+      "median_os_days": Infinity
+    },
+    "logrank_p": 0.9361906077739703
+  },
+  "survival_figure_prognosis": "geo_validate_physio.png",
+  "rfs_by_physiotype_prognosis": {
+    "1": {
+      "n": 74,
+      "events": 18,
+      "median_os_days": Infinity
+    },
+    "2": {
+      "n": 76,
+      "events": 18,
+      "median_os_days": Infinity
+    },
+    "3": {
+      "n": 54,
+      "events": 18,
+      "median_os_days": Infinity
+    },
+    "logrank_p": 0.9221863381812301
+  },
+  "rfs_figure_prognosis": "geo_validate_physio.png",
+  "survival_by_ig_signature": {
+    "0": {
+      "n": 102,
+      "events": 10,
+      "median_os_days": Infinity
+    },
+    "1": {
+      "n": 102,
+      "events": 20,
+      "median_os_days": Infinity
+    },
+    "logrank_p": 0.06580727364948377
+  },
+  "survival_ig_figure": "geo_validate_ig_high.png",
+  "rfs_by_ig_signature": {
+    "0": {
+      "n": 102,
+      "events": 22,
+      "median_os_days": Infinity
+    },
+    "1": {
+      "n": 102,
+      "events": 32,
+      "median_os_days": Infinity
+    },
+    "logrank_p": 0.12388616802917152
+  },
+  "rfs_ig_figure": "geo_validate_ig_high.png",
+  "ig_score_os_days_pearson": {
+    "r": -0.015,
+    "p": 0.8300735039936004
+  },
+  "ig_score_event_pearson": {
+    "r": 0.103,
+    "p": 0.1438777433040067
+  },
+  "ig_signature_tumor_vs_normal_ttest_p": 0.9999999999999971,
+  "cluster_stability_bootstrap": {
+    "n_boot": 50,
+    "frac": 0.8,
+    "ari_mean": 0.684,
+    "ari_sd": 0.196,
+    "ari_min": 0.332
+  },
+  "rmt": {
+    "lambda_max": 52.75491606771217,
+    "lambda_plus": 4.738638612932914,
+    "fraction_above_bound": 0.038338658146964855,
+    "top20_abs_loadings": [
+      [
+        "CEACAM6",
+        0.1613
+      ],
+      [
+        "NPW",
+        -0.1535
+      ],
+      [
+        "NAPSA",
+        0.1528
+      ],
+      [
+        "SFTPB",
+        0.1436
+      ],
+      [
+        "PIGR",
+        0.1287
+      ],
+      [
+        "C4BPA",
+        0.1259
+      ],
+      [
+        "CYP4F11",
+        -0.1235
+      ],
+      [
+        "SLC34A2",
+        0.1204
+      ],
+      [
+        "AQP3",
+        0.1104
+      ],
+      [
+        "FOXQ1",
+        0.109
+      ],
+      [
+        "PAEP",
+        -0.1057
+      ],
+      [
+        "PKP1",
+        -0.1054
+      ],
+      [
+        "NDNF",
+        0.105
+      ],
+      [
+        "PITX1",
+        -0.1045
+      ],
+      [
+        "CTSE",
+        0.1042
+      ],
+      [
+        "TSPAN8",
+        0.1041
+      ],
+      [
+        "SFTPD",
+        0.1038
+      ],
+      [
+        "KLK14",
+        -0.1031
+      ],
+      [
+        "C16orf89",
+        0.1021
+      ],
+      [
+        "LGI3",
+        -0.0988
+      ]
+    ],
+    "mean_abs_loading_ig_module": 0.04968429447053449,
+    "mean_abs_loading_all_genes": 0.046113396132562295,
+    "ig_module_loading_ratio": 1.08
+  },
+  "tda_ig_high_vs_low": {
+    "d_topo": 0.0088,
+    "p_permutation": 0.7437185929648241,
+    "n_perm": 199,
+    "n_high": 113,
+    "n_low": 113
+  },
+  "tda_tumor_vs_normal": {
+    "d_topo": 0.6698,
+    "p_permutation": 0.0,
+    "n_perm": 199
+  }
+}

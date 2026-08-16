@@ -32,8 +32,10 @@ the real biological grouping.
 | HSIC | pooled SFTPC×BPIFA1 dependence was a mixture artifact — within-group p = 0.09 / 0.48 |
 | EVT | Fréchet tails; RL99 higher in tumours (18.0 vs 13.1, permutation p = 0.005) |
 | Bayesian (matched) | tissue effect on SFTPC = −5.62 [−6.21, −4.95], R̂ = 1.002, 0 divergences |
-| DESeq2 | 27,254 DE genes (padj < 0.05); HVG ∩ top-DE = 6% (Jaccard 0.06) |
-| Physiotypes | stage-independent (p = 0.76); OS log-rank p < 0.001 (worst: immune-cold physiotype 3) |
+| DESeq2 | 27,254 DE genes (padj < 0.05); 14,769 with |log2FC| > 1; HVG ∩ top-DE = 6% (Jaccard 0.06) |
+| Physiotypes | stage-independent (p = 0.76); agree with TRU/PI/PP subtypes (χ² = 14.44, p = 0.006); OS log-rank p < 0.001 (worst: immune-cold physiotype 3) |
+| IGKC signature | 20-gene λ_max module: protective trend only (HR = 0.83, p = 0.15); stage significant within each physiotype, physiotype not within stage |
+| External validation (GSE31210) | 3 clusters reproduce (bootstrap ARI = 0.68, IG-enriched cluster), tumour/normal d̄_topo = 0.670 reproduces; survival associations do not (power + GPL570 coverage) |
 
 Articles:
 - `article/gdc_article_real.md/.docx` — methods on real groups (Russian)
@@ -48,8 +50,13 @@ python scripts/gdc2_robustness.py      # gene-selection robustness + λ_max modu
 python scripts/run_gdc_deseq2.py       # DESeq2
 python scripts/gdc_umap.py             # UMAP + k-means + physiotypes + top-50 genes
 python scripts/gdc_gsea.py             # GSEA prerank (GSEA_PERM=200)
+python scripts/gdc2_cmp_deseq2.py      # HVG/PC1 vs DESeq2 comparison
 python scripts/gdc2_clinical.py        # stages (UCSC Xena)
 python scripts/gdc2_survival.py        # Kaplan–Meier + Cox
+python scripts/gdc2_survival_igkc.py   # IGKC signature, stage stratification, mutation Cox
+python scripts/gdc2_subtypes.py        # TRU/PI/PP subtypes (Nature 2014) vs physiotypes
+python scripts/fetch_geo_gse31210.py   # GSE31210 download/parse (DoH + curl --resolve)
+python scripts/geo_validate.py         # external validation of physiotypes on GSE31210
 ```
 
 ## Repository structure

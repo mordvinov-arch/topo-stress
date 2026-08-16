@@ -32,6 +32,9 @@ data/raw/MMASH/
 data/gdc/
 gdc_token.txt
 
+# GEO: сырые загрузки GSE31210 (~68 МБ, качает fetch_geo_gse31210.py)
+data/geo/
+
 # Крупные производные массивы (регенерируются из data/gdc скриптами):
 data/processed/*.npz
 
