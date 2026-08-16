@@ -1,0 +1,22 @@
+{
+  "method": "EVT GEV on sample maxima",
+  "n_genes": 500,
+  "Tumor": {
+    "n": 542,
+    "xi": 0.2364697318688959,
+    "mu": 9.936942042524308,
+    "sigma": 0.9713761519823677,
+    "tail_type": "Frechet (heavy)",
+    "rl99": 18.020015688397123
+  },
+  "Normal": {
+    "n": 59,
+    "xi": 0.2609533160880747,
+    "mu": 10.170718604163044,
+    "sigma": 0.3341627330537609,
+    "tail_type": "Frechet (heavy)",
+    "rl99": 13.143538994903786
+  },
+  "RL99_Tumor_minus_Normal_perm_p": 0.005,
+  "RL99_Tumor_minus_Normal_obs": 4.876476693493338
+}

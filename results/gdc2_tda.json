@@ -1,0 +1,11 @@
+{
+  "method": "TDA d_topo (Betti-0)",
+  "n_tumor": 542,
+  "n_normal": 59,
+  "n_genes": 500,
+  "n_perm": 199,
+  "n_eps": 100,
+  "d_topo": 0.5995899090741021,
+  "d_combined": 16.686666535438622,
+  "p_permutation": 0.0
+}

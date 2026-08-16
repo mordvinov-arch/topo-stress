@@ -1,0 +1,52 @@
+{
+  "method": "KM + CoxPH per physiotype (tumor, patient-level)",
+  "n_patients": 507,
+  "n_events": 183,
+  "km": {
+    "1": {
+      "n": 327,
+      "events": 111,
+      "median_os_days": 1531.0,
+      "median_ci": null
+    },
+    "2": {
+      "n": 139,
+      "events": 50,
+      "median_os_days": 1498.0,
+      "median_ci": null
+    },
+    "3": {
+      "n": 41,
+      "events": 22,
+      "median_os_days": 1171.0,
+      "median_ci": null
+    }
+  },
+  "logrank_p": 0.0,
+  "cox": {
+    "formula": "physiotype + age_years + stage_grp",
+    "n": 497,
+    "summary": {
+      "physiotype": {
+        "coef": 0.131,
+        "hr": 1.139,
+        "p": 0.2333
+      },
+      "age_years": {
+        "coef": 3.722,
+        "hr": 41.336,
+        "p": 0.1832
+      },
+      "stage_grp[T.III/IV]": {
+        "coef": 0.941,
+        "hr": 2.562,
+        "p": 0.0
+      },
+      "stage_grp[T.NA]": {
+        "coef": -0.345,
+        "hr": 0.708,
+        "p": 0.6296
+      }
+    }
+  }
+}

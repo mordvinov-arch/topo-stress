@@ -1,0 +1,9 @@
+{
+  "pc1_pve_pct": 14.154109791317754,
+  "corr_log2FC_pc1loading": 0.1219,
+  "jaccard_HVG_top500_deseq_padj": 0.0604,
+  "jaccard_HVG_top500_pc1load": 0.0,
+  "jaccard_deseq_padj_topPC1": 0.0,
+  "n_sig_up": 12874,
+  "n_sig_down": 3421
+}

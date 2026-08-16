@@ -1,0 +1,27 @@
+{
+  "method": "HSIC median bandwidth",
+  "genes": [
+    "SFTPC",
+    "BPIFA1"
+  ],
+  "tissue_vs_SFTPC": {
+    "hsic": 0.005963243351669453,
+    "p": 0.0
+  },
+  "tissue_vs_BPIFA1": {
+    "hsic": 0.0004108446736397694,
+    "p": 0.0
+  },
+  "SFTPCxBPIFA1_Tumor": {
+    "hsic": 0.0006528392785279794,
+    "p": 0.09045226130653267,
+    "pearson_r": -0.0719962901076235,
+    "pearson_p": 0.09404382389878756
+  },
+  "SFTPCxBPIFA1_Normal": {
+    "hsic": 0.002674188490226189,
+    "p": 0.4824120603015075,
+    "pearson_r": -0.11336580072935572,
+    "pearson_p": 0.3926016758495632
+  }
+}

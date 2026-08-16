@@ -28,6 +28,13 @@ data/raw/MAST_371_2025111002_Raw.csv
 data/raw/MMASH.zip
 data/raw/MMASH/
 
+# GDC: загруженный датасет (~2.5 ГБ) и токен доступа — не коммитим
+data/gdc/
+gdc_token.txt
+
+# Крупные производные массивы (регенерируются из data/gdc скриптами):
+data/processed/*.npz
+
 # Временные служебные файлы
 *.log
 *.pid

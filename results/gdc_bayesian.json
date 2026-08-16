@@ -1,0 +1,13 @@
+{
+  "method": "Bambi gaussian: y ~ 1 + Group",
+  "outcome": "SFTPC",
+  "draws": 500,
+  "tune": 500,
+  "effect_mean": -1.746874973218541,
+  "effect_hdi_94": [
+    -2.1706627039097914,
+    -1.2998705489996476
+  ],
+  "rhat": 1.0047715503977788,
+  "divergences": 0
+}

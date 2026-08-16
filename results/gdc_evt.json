@@ -1,0 +1,9 @@
+{
+  "method": "EVT: GEV on sample maxima",
+  "n": 601,
+  "xi": 0.2299738951137109,
+  "mu": 9.949462628051215,
+  "sigma": 0.9315889002519784,
+  "tail_type": "Frechet (heavy)",
+  "rl99": 17.56649970376236
+}

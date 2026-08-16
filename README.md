@@ -17,7 +17,40 @@ The project combines **nine analytical methods** on a single dataset in one repr
 | HSIC | Anxiety_peak p = 0.036 (Pearson p = 0.123) — a nonlinear link invisible to linear methods |
 | Info geometry | 3 physiotypes, incl. "super-responders" (22 subjects, 100% Stress, LogAUCg 6.41 vs 3.08), χ² = 14.36, p = 0.0008 |
 
-Full description — in `article/mast_article.md` (and `article/mast_article.docx`).
+Full description — in `article/mast_article.md`.
+
+## TCGA-LUAD extension (GDC, n = 601)
+
+The pipeline was transferred unchanged to 601 TCGA-LUAD RNA-seq samples
+(542 tumours / 59 normal tissues, NCI GDC open access) and validated against
+the real biological grouping.
+
+| Method | Result |
+|---|---|
+| TDA (d̄_topo) | Tumour vs Normal d̄_topo = 0.600 (p < 0.005) — 22× the unsupervised PC1 split (0.027); robust to gene selection (random 500 genes: d̄_topo = 0.417) |
+| RMT | λ_max/λ₊ = 22.7 (tumour) and 5.6 (normal); top eigenvector = immunoglobulin/plasma-cell module |
+| HSIC | pooled SFTPC×BPIFA1 dependence was a mixture artifact — within-group p = 0.09 / 0.48 |
+| EVT | Fréchet tails; RL99 higher in tumours (18.0 vs 13.1, permutation p = 0.005) |
+| Bayesian (matched) | tissue effect on SFTPC = −5.62 [−6.21, −4.95], R̂ = 1.002, 0 divergences |
+| DESeq2 | 27,254 DE genes (padj < 0.05); HVG ∩ top-DE = 6% (Jaccard 0.06) |
+| Physiotypes | stage-independent (p = 0.76); OS log-rank p < 0.001 (worst: immune-cold physiotype 3) |
+
+Articles:
+- `article/gdc_article_real.md/.docx` — methods on real groups (Russian)
+- `article/gdc_article_biology.md/.docx` — biology: DE, physiotypes, survival (Russian)
+- `article/gdc_bioinformatics_ms.md/.docx` — English journal manuscript (Bioinformatics style)
+
+Reproduce (raw GDC downloads ~2.5 GB, **not committed** — place them in `data/gdc/`):
+
+```bash
+python scripts/run_gdc_realgroups.py   # full pipeline on real groups (TDA/RMT/HSIC/EVT/Bayesian/InfoGeometry)
+python scripts/gdc2_robustness.py      # gene-selection robustness + λ_max module
+python scripts/run_gdc_deseq2.py       # DESeq2
+python scripts/gdc_umap.py             # UMAP + k-means + physiotypes + top-50 genes
+python scripts/gdc_gsea.py             # GSEA prerank (GSEA_PERM=200)
+python scripts/gdc2_clinical.py        # stages (UCSC Xena)
+python scripts/gdc2_survival.py        # Kaplan–Meier + Cox
+```
 
 ## Repository structure
 

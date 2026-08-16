@@ -1,0 +1,18 @@
+{
+  "method": "d_topo robustness to gene selection",
+  "n_perm": 199,
+  "n_eps": 100,
+  "hvg_overlap_with_wide": 0,
+  "HVG_top500": {
+    "d_topo": 0.5996,
+    "p": 0.0
+  },
+  "random_500": {
+    "d_topo": 0.4171,
+    "p": 0.0
+  },
+  "lowest_variance_500": {
+    "d_topo": 0.0,
+    "p": 1.0
+  }
+}

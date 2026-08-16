@@ -1,0 +1,15 @@
+{
+  "method": "Bambi gaussian: y ~ tissue + (1|patient) + (1|plate)",
+  "outcome": "SFTPC",
+  "draws": 500,
+  "tune": 500,
+  "target_accept": 0.999,
+  "effect_var": "tissue",
+  "effect_mean": -5.622092131268056,
+  "effect_hdi_94": [
+    -6.212988229445498,
+    -4.95093668179884
+  ],
+  "rhat": 1.001505246307733,
+  "divergences": 0
+}

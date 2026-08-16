@@ -1,0 +1,10 @@
+{
+  "method": "HSIC (median bandwidth)",
+  "gene_x": "SFTPC",
+  "gene_y": "BPIFA1",
+  "n_perm": 199,
+  "hsic_stat": 0.0012680264435086627,
+  "p_hsic": 0.0,
+  "pearson_r": -0.1453209503968935,
+  "pearson_p": 0.00035135373860791706
+}

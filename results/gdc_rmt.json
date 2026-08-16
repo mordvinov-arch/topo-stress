@@ -1,0 +1,8 @@
+{
+  "method": "RMT: Marchenko-Pastur",
+  "p": 500,
+  "n": 601,
+  "lambda_plus": 3.656169061386455,
+  "lambda_max": 96.30108556463455,
+  "fraction_above_bound": 0.034
+}

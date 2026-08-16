@@ -1,0 +1,18 @@
+{
+  "method": "RMT Marchenko-Pastur",
+  "n_genes": 500,
+  "Tumor": {
+    "n": 542,
+    "q": 0.922509225092251,
+    "lambda_plus": 3.8434561010804975,
+    "lambda_max": 87.0581628000009,
+    "fraction_above_bound": 0.034
+  },
+  "Normal": {
+    "n": 59,
+    "q": 8.474576271186441,
+    "lambda_plus": 15.29680136858226,
+    "lambda_max": 85.53470054902499,
+    "fraction_above_bound": 0.014
+  }
+}

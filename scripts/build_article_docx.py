@@ -15,8 +15,10 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 
 from topostress.config import ARTICLE_DIR, FIGURES_DIR
 
-MD = os.path.join(ARTICLE_DIR, "mast_article.md")
-OUT = os.path.join(ARTICLE_DIR, "mast_article.docx")
+MD = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ARTICLE_DIR, "mast_article.md")
+OUT = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ARTICLE_DIR, "mast_article.docx")
+if not os.path.isabs(MD):
+    MD = os.path.join(ARTICLE_DIR, os.path.basename(MD))
 
 BOLD = re.compile(r"\*\*(.+?)\*\*")
 ITAL = re.compile(r"\*(.+?)\*")

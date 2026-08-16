@@ -1,0 +1,12 @@
+{
+  "method": "TDA d_topo (normalized Betti-0)",
+  "n": 601,
+  "n_genes": 500,
+  "n_perm": 199,
+  "n_eps": 100,
+  "d_topo": 0.02737861140523371,
+  "d_combined": 11.812694184744853,
+  "p_permutation": 0.0,
+  "beta1_max": 0.9983361064891847,
+  "beta2_max": 1.0016638935108153
+}

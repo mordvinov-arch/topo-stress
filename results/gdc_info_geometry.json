@@ -1,0 +1,21 @@
+{
+  "method": "Info geometry: Wasserstein+Ward physiotypes",
+  "n_clusters": 3,
+  "n_genes_sub": 200,
+  "contingency": [
+    {
+      "row_0": "PC1+",
+      "1": 131,
+      "2": 117,
+      "3": 52
+    },
+    {
+      "row_0": "PC1-",
+      "1": 213,
+      "2": 74,
+      "3": 14
+    }
+  ],
+  "chi2": 51.10440537010833,
+  "p_chi2": 7.995016666302162e-12
+}
