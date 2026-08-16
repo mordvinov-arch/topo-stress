@@ -227,14 +227,14 @@ HSIC с RBF-ядром (медианная ширина) и пермутацио
 ## Воспроизводимость
 
 ```
-python scripts\fetch_gdc_metadata.py   # aliquot-метаданные (plate, центр)
-python scripts\gdc_batch_check.py      # батч-эффекты PCA
-python scripts\run_gdc_realgroups.py   # TDA, RMT, HSIC, EVT, Bayesian, InfoGeometry
-python scripts\gdc2_fix_bayes_evt.py   # корректная пермутация RL99 + Bayesian 0 div
-python scripts\gdc2_robustness.py      # устойчивость d_topo + λ_max модуль
-python scripts\gdc2_clinical.py        # стадии (Xena) + присоединение клиники
-python scripts\gdc2_cmp_deseq2.py      # сравнение с DESeq2 (results/gdc2_cmp_deseq2.json)
-python scripts\gdc2_figures_bw.py      # ч/б-стили рис. 2, 4, 5 (Betti, EVT, HSIC)
+python scripts/fetch_gdc_metadata.py   # aliquot-метаданные (plate, центр)
+python scripts/gdc_batch_check.py      # батч-эффекты PCA
+python scripts/run_gdc_realgroups.py   # TDA, RMT, HSIC, EVT, Bayesian, InfoGeometry
+python scripts/gdc2_fix_bayes_evt.py   # корректная пермутация RL99 + Bayesian 0 div
+python scripts/gdc2_robustness.py      # устойчивость d_topo + λ_max модуль
+python scripts/gdc2_clinical.py        # стадии (Xena) + присоединение клиники
+python scripts/gdc2_cmp_deseq2.py      # сравнение с DESeq2 (results/gdc2_cmp_deseq2.json)
+python scripts/gdc2_figures_bw.py      # ч/б-стили рис. 2, 4, 5 (Betti, EVT, HSIC)
 ```
 
 Промежуточные данные: `data/gdc/gdc_sample_sheet.tsv`, `data/processed/gdc_metadata.csv`, `data/processed/gdc2_labels.csv`; результаты — `results/gdc2_*.json`; рисунки — `figures/gdc2_*.png` (многосерийные графики различают серии стилем линии/маркером и читабельны в ч/б). Репозиторий: `https://github.com/mordvinov-arch/topo-stress`.

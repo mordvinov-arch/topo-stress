@@ -30,12 +30,12 @@ the real biological grouping.
 | TDA (d̄_topo) | Tumour vs Normal d̄_topo = 0.600 (p < 0.005) — 22× the unsupervised PC1 split (0.027); robust to gene selection (random 500 genes: d̄_topo = 0.417) |
 | RMT | λ_max/λ₊ = 22.7 (tumour) and 5.6 (normal); top eigenvector = immunoglobulin/plasma-cell module |
 | HSIC | pooled SFTPC×BPIFA1 dependence was a mixture artifact — within-group p = 0.09 / 0.48 |
-| EVT | Fréchet tails; RL99 higher in tumours (18.0 vs 13.1, permutation p = 0.005) |
+| EVT | Fréchet tails; RL99 higher in tumours (18.02 vs 13.14, permutation p = 0.005) |
 | Bayesian (matched) | tissue effect on SFTPC = −5.62 [−6.21, −4.95], R̂ = 1.002, 0 divergences |
 | DESeq2 | 27,254 DE genes (padj < 0.05); 14,769 with |log2FC| > 1; HVG ∩ top-DE = 6% (Jaccard 0.06) |
 | Physiotypes | stage-independent (p = 0.76); agree with TRU/PI/PP subtypes (χ² = 14.44, p = 0.006); OS log-rank p < 0.001 (worst: immune-cold physiotype 3) |
 | IGKC signature | 20-gene λ_max module: protective trend only (HR = 0.83, p = 0.15); stage significant within each physiotype, physiotype not within stage |
-| External validation (GSE31210) | 3 clusters reproduce (bootstrap ARI = 0.68, IG-enriched cluster), tumour/normal d̄_topo = 0.670 reproduces; survival associations do not (power + GPL570 coverage) |
+| External validation (GSE31210) | 3 clusters reproduce (bootstrap ARI = 0.684, IG-enriched cluster), tumour/normal d̄_topo = 0.670 reproduces; survival associations do not (power + GPL570 coverage) |
 
 Articles:
 - `article/gdc_article_real.md/.docx` — methods on real groups (Russian)
