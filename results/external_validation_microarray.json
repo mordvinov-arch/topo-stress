@@ -1,0 +1,264 @@
+{
+  "method": "External microarray validation (Plan B): GSE68465 (GPL96, LUAD, n=462), GSE50081 (GPL570, early NSCLC, n=181), GSE72094 (GPL15048/HuRSTA merck, LUAD, n=442). IGKC is not directly measured on these platforms; a surrogate is used = mean of per-gene z-scores (log1p) over a fixed plasma-B gene set present on ALL three platforms: MZB1, TNFRSF17, DERL3, CD79A, POU2AF1, JCHAIN, CD19, SDC1, XBP1, IRF4, FKBP11, GPR183. Surrogate validated against IGKC on TCGA (full TPM) and then applied per cohort (median split for KM, continuous for Cox, adjusted for age and stage).",
+  "surrogate_genes": [
+    "MZB1",
+    "TNFRSF17",
+    "DERL3",
+    "CD79A",
+    "POU2AF1",
+    "JCHAIN",
+    "CD19",
+    "SDC1",
+    "XBP1",
+    "IRF4",
+    "FKBP11",
+    "GPR183"
+  ],
+  "tcga_surrogate": {
+    "genes_used": [
+      "MZB1",
+      "TNFRSF17",
+      "DERL3",
+      "CD79A",
+      "POU2AF1",
+      "JCHAIN",
+      "CD19",
+      "SDC1",
+      "XBP1",
+      "IRF4",
+      "FKBP11",
+      "GPR183"
+    ],
+    "corr_with_igkc": 0.8877,
+    "genes_missing": []
+  },
+  "tcga_cox_surrogate": {
+    "n": 493,
+    "events": 179,
+    "formula": "score + age + stage_num",
+    "c_index": 0.6325,
+    "score": {
+      "hr": 0.7261,
+      "p": 0.0069
+    },
+    "age": {
+      "hr": 1.0113,
+      "p": 0.1432
+    },
+    "stage_num": {
+      "hr": 2.3817,
+      "p": 0.0
+    }
+  },
+  "tcga_cox_igkc_true": {
+    "n": 493,
+    "events": 179,
+    "igkc": {
+      "hr": 0.9251,
+      "p": 0.18
+    }
+  },
+  "GSE68465": {
+    "n": 442,
+    "events": 236,
+    "surrogate_genes_used": [
+      "MZB1",
+      "TNFRSF17",
+      "CD79A",
+      "POU2AF1",
+      "JCHAIN",
+      "CD19",
+      "SDC1",
+      "XBP1",
+      "IRF4",
+      "FKBP11",
+      "GPR183"
+    ],
+    "surrogate_genes_missing": [
+      "DERL3"
+    ],
+    "survival_by_high": {
+      "0": {
+        "n": 221,
+        "events": 123,
+        "median_os_days": 2070.0
+      },
+      "1": {
+        "n": 221,
+        "events": 113,
+        "median_os_days": 2243.0
+      },
+      "logrank_p": 0.0929
+    },
+    "km_figure": "external_validation_microarray_km_GSE68465.png",
+    "cox": {
+      "n": 439,
+      "events": 235,
+      "formula": "score + age + stage_num",
+      "c_index": 0.6969,
+      "score": {
+        "hr": 0.8155,
+        "p": 0.0337
+      },
+      "age": {
+        "hr": 1.0303,
+        "p": 0.0
+      },
+      "stage_num": {
+        "hr": 2.169,
+        "p": 0.0
+      }
+    }
+  },
+  "GSE50081": {
+    "n": 181,
+    "events": 75,
+    "surrogate_genes_used": [
+      "MZB1",
+      "TNFRSF17",
+      "DERL3",
+      "CD79A",
+      "POU2AF1",
+      "JCHAIN",
+      "CD19",
+      "SDC1",
+      "XBP1",
+      "IRF4",
+      "FKBP11",
+      "GPR183"
+    ],
+    "surrogate_genes_missing": [],
+    "survival_by_high": {
+      "0": {
+        "n": 91,
+        "events": 40,
+        "median_os_days": 2363.0
+      },
+      "1": {
+        "n": 90,
+        "events": 35,
+        "median_os_days": Infinity
+      },
+      "logrank_p": 0.5333
+    },
+    "km_figure": "external_validation_microarray_km_GSE50081.png",
+    "cox": {
+      "n": 181,
+      "events": 75,
+      "formula": "score + age + stage_num",
+      "c_index": 0.6006,
+      "score": {
+        "hr": 0.8365,
+        "p": 0.2523
+      },
+      "age": {
+        "hr": 1.0169,
+        "p": 0.1823
+      },
+      "stage_num": {
+        "hr": 1.6483,
+        "p": 0.04
+      }
+    }
+  },
+  "GSE72094": {
+    "n": 398,
+    "events": 113,
+    "surrogate_genes_used": [
+      "MZB1",
+      "TNFRSF17",
+      "DERL3",
+      "CD79A",
+      "POU2AF1",
+      "JCHAIN",
+      "CD19",
+      "SDC1",
+      "XBP1",
+      "IRF4",
+      "FKBP11",
+      "GPR183"
+    ],
+    "surrogate_genes_missing": [],
+    "survival_by_high": {
+      "0": {
+        "n": 199,
+        "events": 59,
+        "median_os_days": 1560.0
+      },
+      "1": {
+        "n": 199,
+        "events": 54,
+        "median_os_days": Infinity
+      },
+      "logrank_p": 0.6382
+    },
+    "km_figure": "external_validation_microarray_km_GSE72094.png",
+    "cox": {
+      "n": 393,
+      "events": 111,
+      "formula": "score + age + stage_num",
+      "c_index": 0.6375,
+      "score": {
+        "hr": 0.9545,
+        "p": 0.6901
+      },
+      "age": {
+        "hr": 1.0046,
+        "p": 0.652
+      },
+      "stage_num": {
+        "hr": 1.6171,
+        "p": 0.0
+      }
+    }
+  },
+  "pooled_microarray": {
+    "n": 1013,
+    "events": 421,
+    "n_by_cohort": {
+      "GSE68465": 439,
+      "GSE50081": 181,
+      "GSE72094": 393
+    },
+    "score_z": {
+      "hr": 0.8994,
+      "p": 0.0279
+    },
+    "age": {
+      "hr": 1.0208,
+      "p": 0.0001
+    },
+    "stage_z": {
+      "hr": 1.5705,
+      "p": 0.0
+    },
+    "survival_by_high": {
+      "0": {
+        "n": 507,
+        "events": 225,
+        "median_os_days": 2100.0
+      },
+      "1": {
+        "n": 506,
+        "events": 196,
+        "median_os_days": 2211.0
+      },
+      "logrank_p": 0.0348
+    },
+    "km_figure": "external_validation_microarray_km_pooled.png"
+  },
+  "pooled_all4_surrogate": {
+    "n": 1506,
+    "events": 600,
+    "n_by_cohort": {
+      "TCGA": 493,
+      "GSE68465": 439,
+      "GSE50081": 181,
+      "GSE72094": 393
+    },
+    "score_z": {
+      "hr": 0.8725,
+      "p": 0.0008
+    }
+  }
+}

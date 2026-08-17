@@ -1,5 +1,5 @@
 {
-  "method": "External RNA-seq validation on GSE81089 (Uppsala, 199 NSCLC + 19 normals, Illumina HiSeq2500, cufflinks FPKM, Ensembl v73). Primary analysis on the LUAD subtype (histology code 2, verified by marker expression NKX2-1/SFTPA/NAPSA vs TP63/KRT5/KRT14; histology_marker_verification); sensitivity on all NSCLC. OS = vital date - surgery date, event = dead. Batch handling: per-gene z-score within each dataset (ComBat/sva not available in the environment). Physiotypes predicted by a TCGA-LUAD-trained RandomForest on 500 HVG (z-scored).",
+  "method": "External RNA-seq validation on GSE81089 (Uppsala, 199 NSCLC + 19 normals, Illumina HiSeq2500, cufflinks FPKM, Ensembl v73). Primary analysis on the LUAD subtype (histology code 2; marker verification NKX2-1/SFTPA/NAPSA vs TP63/KRT5/KRT14 and Table 1 of Djureinovic et al. 2016 agree: 108 adenocarcinoma, 67 SCC, 24 NOS); sensitivity on all NSCLC. OS = vital date - surgery date, event = dead. Batch handling: per-gene z-score within each dataset (ComBat/sva not available in the environment). Physiotypes predicted by a TCGA-LUAD-trained RandomForest on 500 HVG (z-scored).",
   "hvg_n_tcga": 500,
   "igkc_module_genes": [
     "IGKC",
