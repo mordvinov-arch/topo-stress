@@ -1,0 +1,267 @@
+{
+  "method": "External RNA-seq validation on GSE81089 (Uppsala, 199 NSCLC + 19 normals, Illumina HiSeq2500, cufflinks FPKM, Ensembl v73). Primary analysis on the LUAD subtype (histology code 2, verified by marker expression NKX2-1/SFTPA/NAPSA vs TP63/KRT5/KRT14; histology_marker_verification); sensitivity on all NSCLC. OS = vital date - surgery date, event = dead. Batch handling: per-gene z-score within each dataset (ComBat/sva not available in the environment). Physiotypes predicted by a TCGA-LUAD-trained RandomForest on 500 HVG (z-scored).",
+  "hvg_n_tcga": 500,
+  "igkc_module_genes": [
+    "IGKC",
+    "IGKV3-20",
+    "IGKV1-5",
+    "IGKV3-11",
+    "IGKV3-15",
+    "IGHV1-18",
+    "IGLC2",
+    "IGHV5-51",
+    "IGKJ1",
+    "IGHV3-23",
+    "IGHV4-59",
+    "IGKV4-1",
+    "IGHV3-21",
+    "IGHG1",
+    "IGLV1-40",
+    "IGLV1-47",
+    "IGLV3-1",
+    "IGKV1-39",
+    "IGLV2-23",
+    "IGHJ4"
+  ],
+  "tcga_n": 601,
+  "tcga_physiotype_counts": {
+    "1": 344,
+    "2": 191,
+    "3": 66
+  },
+  "histology_marker_verification": {
+    "1": {
+      "n": 67,
+      "mean_log1p_luad_markers": 3.838,
+      "mean_log1p_scc_markers": 5.118
+    },
+    "2": {
+      "n": 106,
+      "mean_log1p_luad_markers": 5.316,
+      "mean_log1p_scc_markers": 1.182
+    },
+    "3": {
+      "n": 24,
+      "mean_log1p_luad_markers": 3.723,
+      "mean_log1p_scc_markers": 2.032
+    }
+  },
+  "luad": {
+    "n": 106,
+    "n_events": 49,
+    "hvg_coverage_n": 478,
+    "igkc_genes_present": 20,
+    "igkc_genes_missing": [],
+    "rf_physiotype_counts_seed42": {
+      "1": 63,
+      "2": 40,
+      "3": 3
+    },
+    "rf_physiotype_counts_seeds42_46_mean_sd": {
+      "1": [
+        61.0,
+        1.4
+      ],
+      "2": [
+        41.6,
+        1.5
+      ],
+      "3": [
+        3.4,
+        1.1
+      ]
+    },
+    "survival_by_physiotype": {
+      "1": {
+        "n": 63,
+        "events": 28,
+        "median_os_days": Infinity
+      },
+      "2": {
+        "n": 40,
+        "events": 20,
+        "median_os_days": 1888.0
+      },
+      "3": {
+        "n": 3,
+        "events": 1,
+        "median_os_days": Infinity
+      },
+      "logrank_extremes_p": 0.7137,
+      "logrank_extremes_compare": "1 vs 3"
+    },
+    "survival_figure": "external_validation_rnaseq_km_luad.png",
+    "cox_physio_reference_ph3": {
+      "n": 105,
+      "events": 48,
+      "formula": "C(physio) + stage_num + age",
+      "reference_physiotype": 3,
+      "c_index": 0.6765,
+      "physio_2_vs_ref": {
+        "hr": 1.0557,
+        "p": 0.8705
+      },
+      "stage_num": {
+        "hr": 1.4321,
+        "p": 0.0
+      },
+      "age": {
+        "hr": 0.9936,
+        "p": 0.7232
+      }
+    },
+    "igkc_median": 0.144,
+    "survival_by_igkc": {
+      "0": {
+        "n": 53,
+        "events": 27,
+        "median_os_days": 1299.0
+      },
+      "1": {
+        "n": 53,
+        "events": 22,
+        "median_os_days": 1888.0
+      },
+      "logrank_extremes_p": 0.5072,
+      "logrank_extremes_compare": "0 vs 1"
+    },
+    "igkc_figure": "external_validation_rnaseq_igkc_km_luad.png",
+    "cox_igkc": {
+      "n": 105,
+      "events": 48,
+      "formula": "igkc + stage_num + age",
+      "c_index": 0.6916,
+      "igkc": {
+        "hr": 0.9046,
+        "p": 0.5318
+      },
+      "stage_num": {
+        "hr": 1.4176,
+        "p": 0.0
+      },
+      "age": {
+        "hr": 0.998,
+        "p": 0.9008
+      }
+    }
+  },
+  "all_nsclc": {
+    "n": 196,
+    "n_events": 93,
+    "hvg_coverage_n": 478,
+    "igkc_genes_present": 20,
+    "igkc_genes_missing": [],
+    "rf_physiotype_counts_seed42": {
+      "1": 127,
+      "2": 60,
+      "3": 10
+    },
+    "rf_physiotype_counts_seeds42_46_mean_sd": {
+      "1": [
+        123.8,
+        2.8
+      ],
+      "2": [
+        64.0,
+        3.1
+      ],
+      "3": [
+        9.2,
+        0.4
+      ]
+    },
+    "survival_by_physiotype": {
+      "1": {
+        "n": 127,
+        "events": 59,
+        "median_os_days": 1774.0
+      },
+      "2": {
+        "n": 59,
+        "events": 30,
+        "median_os_days": 1616.0
+      },
+      "3": {
+        "n": 10,
+        "events": 4,
+        "median_os_days": Infinity
+      },
+      "logrank_extremes_p": 0.5007,
+      "logrank_extremes_compare": "1 vs 3"
+    },
+    "survival_figure": "external_validation_rnaseq_km_all_nsclc.png",
+    "cox_physio_reference_ph3": {
+      "n": 195,
+      "events": 92,
+      "formula": "C(physio) + stage_num + age",
+      "reference_physiotype": 3,
+      "c_index": 0.6296,
+      "physio_2_vs_ref": {
+        "hr": 1.0089,
+        "p": 0.9697
+      },
+      "stage_num": {
+        "hr": 1.3176,
+        "p": 0.0
+      },
+      "age": {
+        "hr": 1.0073,
+        "p": 0.581
+      }
+    },
+    "igkc_median": 0.155,
+    "survival_by_igkc": {
+      "0": {
+        "n": 98,
+        "events": 52,
+        "median_os_days": 1295.0
+      },
+      "1": {
+        "n": 98,
+        "events": 41,
+        "median_os_days": 1932.0
+      },
+      "logrank_extremes_p": 0.1866,
+      "logrank_extremes_compare": "0 vs 1"
+    },
+    "igkc_figure": "external_validation_rnaseq_igkc_km_all_nsclc.png",
+    "cox_igkc": {
+      "n": 195,
+      "events": 92,
+      "formula": "igkc + stage_num + age",
+      "c_index": 0.6371,
+      "igkc": {
+        "hr": 0.9447,
+        "p": 0.6392
+      },
+      "stage_num": {
+        "hr": 1.3,
+        "p": 0.0001
+      },
+      "age": {
+        "hr": 1.0078,
+        "p": 0.5429
+      }
+    }
+  },
+  "pooled_igkc_tcga_gse81089": {
+    "note": "stratified Cox (strata=cohort), stage z-scored within cohort",
+    "n": 602,
+    "events": 228,
+    "n_tcga": 497,
+    "n_gse81089": 105,
+    "igkc": {
+      "hr": 0.8759,
+      "p": 0.0798
+    },
+    "age": {
+      "hr": 1.0084,
+      "p": 0.2275
+    },
+    "stage_z": {
+      "hr": 1.5186,
+      "p": 0.0
+    }
+  },
+  "interpretation": "GSE81089 is an independent RNA-seq cohort (Uppsala, stages I-IV, OS available), but it is NSCLC, not pure LUAD: the LUAD subtype (histology code 2, verified by marker expression, see histology_marker_verification) includes 106 tumors with 49 events; sensitivity is shown on all 196 NSCLC. The TCGA-LUAD RandomForest (500 HVG, per-dataset z-score) reproduces a non-degenerate physiotype distribution (stable across seeds, PH1 63 / PH2 40 / PH3 3 in LUAD). Survival stratification by predicted physiotype does NOT independently replicate here: Cox PH2 vs PH3 HR 1.06 (p=0.87) in LUAD and 1.01 (p=0.97) in all NSCLC, while stage remains the dominant factor (HR 1.4/1.3, p<0.001). The IGKC signature is directionally protective (HR<1, as in TCGA) but not significant in LUAD (HR 0.90, p=0.53) or all NSCLC (HR 0.94, p=0.64); the pooled stratified Cox across TCGA + GSE81089 gives IGKC HR=0.876 (p=0.080), a borderline trend in the protective direction. Caveats: no ComBat (per-dataset z-score only), small PH3 group, and multiple-testing on two subsets; results are consistent in direction with TCGA but not statistically independent evidence."
+}
