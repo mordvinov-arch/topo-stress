@@ -1,0 +1,74 @@
+{
+  "method": "Sensitivity to number of genes: d_topo (PC1+/-) and physiotypes (k=3)",
+  "n": 601,
+  "n_eps": 100,
+  "d_topo_by_ngenes": {
+    "100": {
+      "d_topo": 0.0341
+    },
+    "200": {
+      "d_topo": 0.0308
+    },
+    "300": {
+      "d_topo": 0.0274
+    },
+    "400": {
+      "d_topo": 0.0263
+    },
+    "500": {
+      "d_topo": 0.0274
+    }
+  },
+  "physiotype_by_ngenes": {
+    "100": {
+      "n_genes": 100,
+      "silhouette": 0.0142,
+      "cluster_sizes": {
+        "1": 252,
+        "2": 217,
+        "3": 132
+      }
+    },
+    "200": {
+      "n_genes": 200,
+      "silhouette": 0.0418,
+      "cluster_sizes": {
+        "1": 344,
+        "2": 191,
+        "3": 66
+      },
+      "ari_vs_reference_200": 1.0
+    },
+    "300": {
+      "n_genes": 300,
+      "silhouette": 0.0419,
+      "cluster_sizes": {
+        "1": 326,
+        "2": 65,
+        "3": 210
+      },
+      "ari_vs_reference_200": 0.752
+    },
+    "400": {
+      "n_genes": 400,
+      "silhouette": 0.0029,
+      "cluster_sizes": {
+        "1": 141,
+        "2": 192,
+        "3": 268
+      },
+      "ari_vs_reference_200": 0.305
+    },
+    "500": {
+      "n_genes": 500,
+      "silhouette": 0.0043,
+      "cluster_sizes": {
+        "1": 166,
+        "2": 69,
+        "3": 366
+      },
+      "ari_vs_reference_200": 0.2484
+    }
+  },
+  "d_topo_500_permutation_p": 0.0
+}

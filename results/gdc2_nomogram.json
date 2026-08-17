@@ -1,0 +1,234 @@
+{
+  "method": "Repeated stratified 70/30 CV (C-index on held-out test) + nomogram + calibration",
+  "n_patients": 478,
+  "n_events": 175,
+  "igkc_genes_used": [
+    "IGKC",
+    "IGKV3-20",
+    "IGKV1-5",
+    "IGKV3-11",
+    "IGKV3-15",
+    "IGHV1-18",
+    "IGLC2",
+    "IGHV5-51",
+    "IGKJ1",
+    "IGHV3-23",
+    "IGHV4-59",
+    "IGKV4-1",
+    "IGHV3-21",
+    "IGHG1",
+    "IGLV1-40",
+    "IGLV1-47",
+    "IGLV3-1",
+    "IGKV1-39",
+    "IGLV2-23",
+    "IGHJ4"
+  ],
+  "n_igkc_genes": 20,
+  "M1_clinical": {
+    "features": [
+      "age_years",
+      "stage_III_IV",
+      "PH2",
+      "PH3"
+    ],
+    "c_index_test_mean_sd": [
+      0.6024,
+      0.0352
+    ],
+    "c_index_test_seeds": [
+      0.6684,
+      0.6092,
+      0.572,
+      0.6274,
+      0.6051,
+      0.5733,
+      0.6087,
+      0.5395,
+      0.599,
+      0.6212
+    ]
+  },
+  "M2_clinical_IGKC_TMB": {
+    "features": [
+      "age_years",
+      "stage_III_IV",
+      "PH2",
+      "PH3",
+      "IGKC_z",
+      "TMB_log"
+    ],
+    "c_index_test_mean_sd": [
+      0.5955,
+      0.0316
+    ],
+    "c_index_test_seeds": [
+      0.6134,
+      0.603,
+      0.568,
+      0.6315,
+      0.6366,
+      0.5641,
+      0.5785,
+      0.5405,
+      0.6017,
+      0.6179
+    ]
+  },
+  "M3_plus_immune": {
+    "features": [
+      "age_years",
+      "stage_III_IV",
+      "PH2",
+      "PH3",
+      "IGKC_z",
+      "TMB_log",
+      "B_cells_z",
+      "Cytotoxic_z",
+      "Fibroblasts_z",
+      "EMT_z"
+    ],
+    "c_index_test_mean_sd": [
+      0.6403,
+      0.0201
+    ],
+    "c_index_test_seeds": [
+      0.6594,
+      0.6276,
+      0.618,
+      0.6667,
+      0.6244,
+      0.645,
+      0.6488,
+      0.6089,
+      0.6398,
+      0.6643
+    ]
+  },
+  "M4_lasso_full": {
+    "c_index_test_mean_sd": [
+      0.5918,
+      0.0431
+    ],
+    "c_index_test_seeds": [
+      0.6031,
+      0.6342,
+      0.5759,
+      0.5252,
+      0.6203
+    ]
+  },
+  "nomogram_model": {
+    "predictors": [
+      "age_years",
+      "stage_III_IV",
+      "PH2",
+      "PH3",
+      "IGKC_z",
+      "TMB_log",
+      "CCL20",
+      "DKK1",
+      "SFTPB",
+      "IGKV1-8",
+      "LINC02866",
+      "CPS1"
+    ],
+    "c_index_full": 0.7414,
+    "coef": {
+      "age_years": 0.00924,
+      "stage_III_IV": 0.6822,
+      "PH2": -0.12687,
+      "PH3": 0.23926,
+      "IGKC_z": 0.08167,
+      "TMB_log": -0.09234,
+      "CCL20": 0.23121,
+      "DKK1": 0.19246,
+      "SFTPB": -0.13817,
+      "IGKV1-8": -0.23053,
+      "LINC02866": -0.22368,
+      "CPS1": 0.14068
+    }
+  },
+  "nomogram_axis": {
+    "s5_baseline_ref": 0.9944,
+    "lambda": 0.01858,
+    "total_points_max": 595.7,
+    "points_by_predictor": {
+      "age_years": 27.4,
+      "stage_III_IV": 36.7,
+      "PH2": 6.8,
+      "PH3": 12.9,
+      "IGKC_z": 26.7,
+      "TMB_log": 23.3,
+      "CCL20": 86.5,
+      "DKK1": 67.6,
+      "SFTPB": 79.0,
+      "IGKV1-8": 100.0,
+      "LINC02866": 70.6,
+      "CPS1": 58.2
+    }
+  },
+  "interpretation": "Honest (held-out repeated CV) comparison: clinical baseline (age+stage+physiotype) C-index 0.60; adding IGKC signature and log(TMB) does NOT improve (0.60); adding immune/functional scores (B_cells, Cytotoxic, Fibroblasts, EMT) improves to 0.64; a full 500-HVG LASSO-Cox does not beat the parsimonious immune model (0.59). The nomogram (parsimonious CoxPH, full-data C-index 0.74) is calibrated at 5 years with mild over-confidence at the extremes (calibration deciles).",
+  "calibration_5y_deciles": [
+    {
+      "group": 0,
+      "n": 48,
+      "predicted_mean": 0.013,
+      "observed_km": 0.04
+    },
+    {
+      "group": 1,
+      "n": 48,
+      "predicted_mean": 0.098,
+      "observed_km": 0.152
+    },
+    {
+      "group": 2,
+      "n": 48,
+      "predicted_mean": 0.208,
+      "observed_km": 0.349
+    },
+    {
+      "group": 3,
+      "n": 48,
+      "predicted_mean": 0.286,
+      "observed_km": 0.357
+    },
+    {
+      "group": 4,
+      "n": 48,
+      "predicted_mean": 0.375,
+      "observed_km": 0.252
+    },
+    {
+      "group": 5,
+      "n": 48,
+      "predicted_mean": 0.445,
+      "observed_km": 0.501
+    },
+    {
+      "group": 6,
+      "n": 48,
+      "predicted_mean": 0.533,
+      "observed_km": 0.529
+    },
+    {
+      "group": 7,
+      "n": 48,
+      "predicted_mean": 0.602,
+      "observed_km": 0.599
+    },
+    {
+      "group": 8,
+      "n": 47,
+      "predicted_mean": 0.661,
+      "observed_km": 0.552
+    },
+    {
+      "group": 9,
+      "n": 47,
+      "predicted_mean": 0.754,
+      "observed_km": 0.555
+    }
+  ]
+}

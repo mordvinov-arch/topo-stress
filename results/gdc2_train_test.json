@@ -1,0 +1,148 @@
+{
+  "method": "Internal train/test 70/30 (2 protocols, 5 seeds). Unsupervised: physiotypes re-clustered on train (Wasserstein+Ward k=3), test by nearest Wasserstein centroid, vs canonical full-data physiotypes. Supervised: RandomForest (200 HVG z-scored) trained on canonical train labels, predicts test.",
+  "n": 601,
+  "n_seeds": 5,
+  "unsupervised": {
+    "ari_all_mean_sd": [
+      0.4014,
+      0.0846
+    ],
+    "ari_test_mean_sd": [
+      0.0028,
+      0.0299
+    ],
+    "accuracy_mapped_mean_sd": [
+      0.779,
+      0.039
+    ]
+  },
+  "supervised": {
+    "ari_test_mean_sd": [
+      0.5251,
+      0.0611
+    ],
+    "accuracy_test_mean_sd": [
+      0.8077,
+      0.0261
+    ]
+  },
+  "interpretation": "Unsupervised nearest-Wasserstein-centroid assignment COLLAPSES: almost all test samples are assigned to a single train cluster (see test_assignment_counts), so test ARI ~ 0. The Wasserstein distance to simplex-row centroids is not a reliable assignment rule for these data (sparse mass profiles make one centroid dominant). A supervised classifier (RandomForest, 200 HVG z-scored) trained on canonical labels generalizes well to held-out samples (test ARI 0.44-0.59, accuracy 0.78-0.84), i.e. the physiotype signal is learnable and reproducible, but its unsupervised centroid-based assignment is not.",
+  "per_seed": [
+    {
+      "seed": 42,
+      "train_n": 419,
+      "test_n": 182,
+      "unsupervised": {
+        "ari_all": 0.4487,
+        "ari_test": -0.0102,
+        "accuracy_all_mapped": 0.802,
+        "test_assignment_counts": {
+          "0": 1,
+          "1": 180,
+          "2": 1
+        }
+      },
+      "supervised": {
+        "ari_test": 0.5928,
+        "accuracy_test": 0.8242,
+        "accuracy_test_per_class": {
+          "1": 0.904,
+          "2": 0.828,
+          "3": 0.4
+        }
+      }
+    },
+    {
+      "seed": 43,
+      "train_n": 419,
+      "test_n": 182,
+      "unsupervised": {
+        "ari_all": 0.5286,
+        "ari_test": 0.0538,
+        "accuracy_all_mapped": 0.8369,
+        "test_assignment_counts": {
+          "1": 178,
+          "2": 4
+        }
+      },
+      "supervised": {
+        "ari_test": 0.4443,
+        "accuracy_test": 0.7747,
+        "accuracy_test_per_class": {
+          "1": 0.827,
+          "2": 0.776,
+          "3": 0.5
+        }
+      }
+    },
+    {
+      "seed": 44,
+      "train_n": 419,
+      "test_n": 182,
+      "unsupervised": {
+        "ari_all": 0.3372,
+        "ari_test": -0.0244,
+        "accuracy_all_mapped": 0.7521,
+        "test_assignment_counts": {
+          "0": 2,
+          "1": 3,
+          "2": 177
+        }
+      },
+      "supervised": {
+        "ari_test": 0.5261,
+        "accuracy_test": 0.8187,
+        "accuracy_test_per_class": {
+          "1": 0.865,
+          "2": 0.845,
+          "3": 0.5
+        }
+      }
+    },
+    {
+      "seed": 45,
+      "train_n": 419,
+      "test_n": 182,
+      "unsupervised": {
+        "ari_all": 0.341,
+        "ari_test": -0.0052,
+        "accuracy_all_mapped": 0.7488,
+        "test_assignment_counts": {
+          "1": 1,
+          "2": 181
+        }
+      },
+      "supervised": {
+        "ari_test": 0.4879,
+        "accuracy_test": 0.7857,
+        "accuracy_test_per_class": {
+          "1": 0.865,
+          "2": 0.741,
+          "3": 0.5
+        }
+      }
+    },
+    {
+      "seed": 46,
+      "train_n": 419,
+      "test_n": 182,
+      "unsupervised": {
+        "ari_all": 0.3517,
+        "ari_test": 0.0,
+        "accuracy_all_mapped": 0.7554,
+        "test_assignment_counts": {
+          "2": 182
+        }
+      },
+      "supervised": {
+        "ari_test": 0.5746,
+        "accuracy_test": 0.8352,
+        "accuracy_test_per_class": {
+          "1": 0.894,
+          "2": 0.845,
+          "3": 0.5
+        }
+      }
+    }
+  ]
+}

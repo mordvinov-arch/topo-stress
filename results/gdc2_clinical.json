@@ -64,23 +64,23 @@
     "n": 533
   },
   "survival_summary": {
-    "patients_with_os": 532,
-    "events": 193,
+    "patients_with_os": 507,
+    "events": 183,
     "per_physiotype": {
       "1": {
-        "n": 335,
-        "events": 114,
-        "median_os_days": 656.0
+        "n": 327,
+        "events": 111,
+        "median_os_days": 1531.0
       },
       "2": {
-        "n": 152,
-        "events": 55,
-        "median_os_days": 729.5
+        "n": 139,
+        "events": 50,
+        "median_os_days": 1498.0
       },
       "3": {
-        "n": 45,
-        "events": 24,
-        "median_os_days": 842.0
+        "n": 41,
+        "events": 22,
+        "median_os_days": 1171.0
       }
     }
   },

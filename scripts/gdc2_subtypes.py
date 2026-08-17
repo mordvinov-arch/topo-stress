@@ -40,7 +40,7 @@ def main():
     df = df.dropna(subset=["os_days"]).copy()
     df["os_days"] = df["os_days"].astype(float)
     df["event"] = df["event"].astype(int)
-    df["age_years"] = pd.to_numeric(df["age_at_initial_pathologic_diagnosis"], errors="coerce").abs() / 365.25
+    df["age_years"] = pd.to_numeric(df["age_at_initial_pathologic_diagnosis"], errors="coerce").abs()
     df["stage_grp"] = df["stage_grp"].fillna("NA")
     df["physio"] = df["physiotype"].astype(int)
 

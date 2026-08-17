@@ -1,0 +1,96 @@
+{
+  "method": "Immune checkpoints and ESTIMATE-like scores by physiotype",
+  "checkpoint_genes": {
+    "PDCD1": "PD-1",
+    "CD274": "PD-L1",
+    "PDCD1LG2": "PD-L2",
+    "CTLA4": "CTLA4",
+    "LAG3": "LAG3",
+    "HAVCR2": "TIM-3",
+    "TIGIT": "TIGIT",
+    "IDO1": "IDO1",
+    "SIGLEC15": "SIGLEC15",
+    "VTCN1": "B7-H4"
+  },
+  "immune_signature_n": 61,
+  "stromal_signature_n": 49,
+  "checkpoints_missing_from_tpm": [],
+  "kruskal_p_by_score": {
+    "ImmuneScore": 0.0,
+    "StromalScore": 0.0,
+    "ESTIMATE_like": 0.0,
+    "purity": 0.0,
+    "checkpoint_score": 0.00251
+  },
+  "median_score_by_physio": {
+    "ImmuneScore": {
+      "1": 0.1364,
+      "2": -0.1455,
+      "3": -0.4992
+    },
+    "StromalScore": {
+      "1": 0.1449,
+      "2": -0.1337,
+      "3": -0.4278
+    },
+    "ESTIMATE_like": {
+      "1": 0.2945,
+      "2": -0.2811,
+      "3": -1.0668
+    },
+    "purity": {
+      "1": 0.8225,
+      "2": 0.8225,
+      "3": 0.8226
+    },
+    "checkpoint_score": {
+      "1": 0.0895,
+      "2": -0.0322,
+      "3": -0.324
+    }
+  },
+  "correlations": {
+    "checkpoint_score_vs_TMB_log": {
+      "rho": 0.075,
+      "p": 0.09404
+    },
+    "checkpoint_score_vs_IGKC_module": {
+      "rho": 0.336,
+      "p": 0.0
+    },
+    "ImmuneScore_vs_TMB_log": {
+      "rho": 0.0,
+      "p": 0.99837
+    },
+    "purity_vs_TMB_log": {
+      "rho": 0.046,
+      "p": 0.30697
+    }
+  },
+  "logrank_checkpoint_hi_vs_lo": 0.3426,
+  "median_os_checkpoint": {
+    "hi": 1531.0,
+    "lo": 1421.0
+  },
+  "cox_age_stage_checkpoint": {
+    "summary": {
+      "age_years": {
+        "coef": 0.0086,
+        "hr": 1.009,
+        "p": 0.2631
+      },
+      "stage_III_IV": {
+        "coef": 0.9365,
+        "hr": 2.551,
+        "p": 0.0
+      },
+      "checkpoint_score": {
+        "coef": -0.0544,
+        "hr": 0.947,
+        "p": 0.6053
+      }
+    },
+    "c_index": 0.6179
+  },
+  "interpretation": "Checkpoint module and ESTIMATE-like immune/stromal scores differ across physiotypes (Kruskal-Wallis p <= 0.0025): checkpoint_score is highest in PH1 (immune/B-cell-rich) and lowest in PH3, and ImmuneScore/StromalScore/ESTIMATE-like are highest in PH1 and lowest in PH3. Estimated tumor purity is nearly identical across physiotypes (median 0.8225/0.8225/0.8226) and does not discriminate. checkpoint_score correlates only weakly with TMB (Spearman rho=0.075, p=0.094) and moderately with the IGKC/CD27/MS4A1 B-cell proxy (rho=0.336, p<0.001). checkpoint-high vs -low does NOT stratify OS (log-rank p=0.34; Cox HR=0.95, p=0.61); stage dominates. Caveat: ESTIMATE-like scores are literature-curated signatures, not the exact Yoshihara 2013 lists, and the purity formula is the original microarray version."
+}

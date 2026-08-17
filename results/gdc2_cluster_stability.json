@@ -1,0 +1,184 @@
+{
+  "method": "Cluster stability: k x n_genes (Wasserstein+Ward)",
+  "k_values": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "gene_counts": [
+    100,
+    200,
+    300,
+    500
+  ],
+  "n_boot": 10,
+  "results": {
+    "100_genes_k2": {
+      "n_genes": 100,
+      "k": 2,
+      "silhouette": 0.0498,
+      "bootstrap_ari_mean_sd": [
+        0.8419,
+        0.1621
+      ]
+    },
+    "200_genes_k2": {
+      "n_genes": 200,
+      "k": 2,
+      "silhouette": 0.0592,
+      "bootstrap_ari_mean_sd": [
+        0.7097,
+        0.1405
+      ]
+    },
+    "300_genes_k2": {
+      "n_genes": 300,
+      "k": 2,
+      "silhouette": 0.0581,
+      "bootstrap_ari_mean_sd": [
+        0.5066,
+        0.2051
+      ]
+    },
+    "500_genes_k2": {
+      "n_genes": 500,
+      "k": 2,
+      "silhouette": 0.0032,
+      "ari_vs_canonical_200": 0.1616,
+      "bootstrap_ari_mean_sd": [
+        0.1107,
+        0.2776
+      ]
+    },
+    "100_genes_k3": {
+      "n_genes": 100,
+      "k": 3,
+      "silhouette": 0.004,
+      "ari_vs_reference": 0.2723,
+      "bootstrap_ari_mean_sd": [
+        0.6809,
+        0.1524
+      ]
+    },
+    "200_genes_k3": {
+      "n_genes": 200,
+      "k": 3,
+      "silhouette": 0.0412,
+      "ari_vs_reference": 1.0,
+      "bootstrap_ari_mean_sd": [
+        0.7313,
+        0.145
+      ]
+    },
+    "300_genes_k3": {
+      "n_genes": 300,
+      "k": 3,
+      "silhouette": 0.0416,
+      "ari_vs_reference": 0.752,
+      "bootstrap_ari_mean_sd": [
+        0.5019,
+        0.1757
+      ]
+    },
+    "500_genes_k3": {
+      "n_genes": 500,
+      "k": 3,
+      "silhouette": 0.0043,
+      "ari_vs_reference": 0.2484,
+      "ari_vs_canonical_200": 0.2484,
+      "bootstrap_ari_mean_sd": [
+        0.4995,
+        0.1391
+      ]
+    },
+    "100_genes_k4": {
+      "n_genes": 100,
+      "k": 4,
+      "silhouette": -0.0002,
+      "bootstrap_ari_mean_sd": [
+        0.7169,
+        0.1549
+      ]
+    },
+    "200_genes_k4": {
+      "n_genes": 200,
+      "k": 4,
+      "silhouette": -0.0103,
+      "bootstrap_ari_mean_sd": [
+        0.6397,
+        0.1579
+      ]
+    },
+    "300_genes_k4": {
+      "n_genes": 300,
+      "k": 4,
+      "silhouette": -0.0068,
+      "bootstrap_ari_mean_sd": [
+        0.5728,
+        0.1112
+      ]
+    },
+    "500_genes_k4": {
+      "n_genes": 500,
+      "k": 4,
+      "silhouette": -0.0015,
+      "ari_vs_canonical_200": 0.3852,
+      "bootstrap_ari_mean_sd": [
+        0.5756,
+        0.0892
+      ]
+    },
+    "100_genes_k5": {
+      "n_genes": 100,
+      "k": 5,
+      "silhouette": -0.0026,
+      "bootstrap_ari_mean_sd": [
+        0.7257,
+        0.1252
+      ]
+    },
+    "200_genes_k5": {
+      "n_genes": 200,
+      "k": 5,
+      "silhouette": -0.0126,
+      "bootstrap_ari_mean_sd": [
+        0.584,
+        0.1099
+      ]
+    },
+    "300_genes_k5": {
+      "n_genes": 300,
+      "k": 5,
+      "silhouette": -0.0041,
+      "bootstrap_ari_mean_sd": [
+        0.4744,
+        0.094
+      ]
+    },
+    "500_genes_k5": {
+      "n_genes": 500,
+      "k": 5,
+      "silhouette": -0.0038,
+      "ari_vs_canonical_200": 0.3843,
+      "bootstrap_ari_mean_sd": [
+        0.5804,
+        0.1231
+      ]
+    }
+  },
+  "adjacent_gene_set_ari": {
+    "k2: 100->200": 0.5926,
+    "k2: 200->300": 0.7511,
+    "k2: 300->500": 0.1981,
+    "k3: 100->200": 0.2723,
+    "k3: 200->300": 0.752,
+    "k3: 300->500": 0.2613,
+    "k4: 100->200": 0.4398,
+    "k4: 200->300": 0.6443,
+    "k4: 300->500": 0.3672,
+    "k5: 100->200": 0.439,
+    "k5: 200->300": 0.5824,
+    "k5: 300->500": 0.3868
+  }
+}

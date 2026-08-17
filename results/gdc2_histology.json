@@ -1,0 +1,182 @@
+{
+  "method": "Histological subtypes (IASLC) vs physiotypes and survival",
+  "n_patients": 507,
+  "n_events": 183,
+  "icd_map": {
+    "8550/3": "Acinar",
+    "8260/3": "Papillary",
+    "8507/3": "Micropapillary",
+    "8230/3": "Solid",
+    "8250/3": "Lepidic",
+    "8252/3": "Lepidic",
+    "8253/3": "Lepidic",
+    "8255/3": "Mixed",
+    "8480/3": "Mucinous",
+    "8140/3": "NOS",
+    "8310/3": "Clear_cell",
+    "8490/3": "Signet_ring"
+  },
+  "histology_counts": {
+    "NOS": 303,
+    "Mixed": 107,
+    "Lepidic": 27,
+    "Acinar": 24,
+    "Papillary": 21,
+    "Mucinous": 14,
+    "Solid": 5,
+    "Micropapillary": 3,
+    "Clear_cell": 2,
+    "Signet_ring": 1
+  },
+  "physiotype_x_histology": {
+    "table": {
+      "1": {
+        "Lepidic": 23,
+        "Acinar": 15,
+        "Papillary": 16,
+        "Micropapillary": 0,
+        "Solid": 3,
+        "Mixed": 74,
+        "Mucinous": 11,
+        "NOS": 182,
+        "Clear_cell": 2,
+        "Signet_ring": 1
+      },
+      "2": {
+        "Lepidic": 3,
+        "Acinar": 8,
+        "Papillary": 1,
+        "Micropapillary": 3,
+        "Solid": 2,
+        "Mixed": 26,
+        "Mucinous": 3,
+        "NOS": 93,
+        "Clear_cell": 0,
+        "Signet_ring": 0
+      },
+      "3": {
+        "Lepidic": 1,
+        "Acinar": 1,
+        "Papillary": 4,
+        "Micropapillary": 0,
+        "Solid": 0,
+        "Mixed": 7,
+        "Mucinous": 0,
+        "NOS": 28,
+        "Clear_cell": 0,
+        "Signet_ring": 0
+      }
+    },
+    "chi2": 29.036,
+    "p": 0.0479,
+    "cramers_v": 0.169
+  },
+  "histology_pct_by_physio": {
+    "1": {
+      "Lepidic": 7.0,
+      "Acinar": 4.6,
+      "Papillary": 4.9,
+      "Micropapillary": 0.0,
+      "Solid": 0.9,
+      "Mixed": 22.6,
+      "Mucinous": 3.4,
+      "NOS": 55.7,
+      "Clear_cell": 0.6,
+      "Signet_ring": 0.3
+    },
+    "2": {
+      "Lepidic": 2.2,
+      "Acinar": 5.8,
+      "Papillary": 0.7,
+      "Micropapillary": 2.2,
+      "Solid": 1.4,
+      "Mixed": 18.7,
+      "Mucinous": 2.2,
+      "NOS": 66.9,
+      "Clear_cell": 0.0,
+      "Signet_ring": 0.0
+    },
+    "3": {
+      "Lepidic": 2.4,
+      "Acinar": 2.4,
+      "Papillary": 9.8,
+      "Micropapillary": 0.0,
+      "Solid": 0.0,
+      "Mixed": 17.1,
+      "Mucinous": 0.0,
+      "NOS": 68.3,
+      "Clear_cell": 0.0,
+      "Signet_ring": 0.0
+    }
+  },
+  "median_os_by_histology": {
+    "Lepidic": 4961.0,
+    "Acinar": Infinity,
+    "Papillary": 2681.0,
+    "Mixed": 1725.0,
+    "Mucinous": Infinity,
+    "NOS": 1229.0
+  },
+  "cox_histology_vs_nos": {
+    "reference": "NOS",
+    "excluded_rare_subtypes_lt10": [
+      "Signet_ring",
+      "Solid",
+      "Micropapillary",
+      "Clear_cell"
+    ],
+    "summary": {
+      "hist_Acinar": {
+        "hr": 0.42,
+        "ci95_low": 0.175,
+        "ci95_up": 1.011,
+        "p": 0.053
+      },
+      "hist_Lepidic": {
+        "hr": 0.534,
+        "ci95_low": 0.262,
+        "ci95_up": 1.089,
+        "p": 0.0845
+      },
+      "hist_Mixed": {
+        "hr": 0.727,
+        "ci95_low": 0.513,
+        "ci95_up": 1.03,
+        "p": 0.0732
+      },
+      "hist_Mucinous": {
+        "hr": 0.693,
+        "ci95_low": 0.254,
+        "ci95_up": 1.893,
+        "p": 0.4743
+      },
+      "hist_Papillary": {
+        "hr": 0.48,
+        "ci95_low": 0.232,
+        "ci95_up": 0.994,
+        "p": 0.048
+      },
+      "age_years": {
+        "hr": 1.013,
+        "ci95_low": 0.999,
+        "ci95_up": 1.028,
+        "p": 0.0784
+      },
+      "stage_III_IV": {
+        "hr": 2.428,
+        "ci95_low": 1.792,
+        "ci95_up": 3.289,
+        "p": 0.0
+      }
+    },
+    "c_index": 0.6642
+  },
+  "histology_predicts_physiotype": {
+    "accuracy_5fold20rep_mean_sd": [
+      0.6471,
+      0.0107
+    ],
+    "baseline_majority_class": 0.645
+  },
+  "interpretation": "In TCGA-LUAD most tumors are coded NOS/Mixed (310/507), and aggressive subtypes solid/micropapillary are rare (5/3) so the hypothesis 'solid physiotype-3-bad-prognosis' cannot be tested with enough power. Weak overall association physiotype x histology (chi2 p=0.048, Cramer's V=0.17); a histology-only classifier does not beat the majority baseline (0.647 vs 0.645), so histology cannot substitute RNA-based physiotyping. Relative to NOS, the large subtypes trend to better OS: Papillary HR=0.48 (p=0.048), Acinar HR=0.42 (p=0.053), Mixed HR=0.73 (p=0.073); median OS is lowest for NOS (1229 d) vs Mixed 1725 d and Papillary 2681 d."
+}

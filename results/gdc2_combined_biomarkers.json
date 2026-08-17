@@ -1,0 +1,135 @@
+{
+  "method": "Combined biomarkers IGKC (median split) x TMB (FDA 10 mut/Mb) for immunotherapy stratification",
+  "n_patients": 478,
+  "n_events": 175,
+  "igkc_median": 0.041,
+  "igkc_genes_used": [
+    "IGKC",
+    "IGKV3-20",
+    "IGKV1-5",
+    "IGKV3-11",
+    "IGKV3-15",
+    "IGHV1-18",
+    "IGLC2",
+    "IGHV5-51",
+    "IGKJ1",
+    "IGHV3-23",
+    "IGHV4-59",
+    "IGKV4-1",
+    "IGHV3-21",
+    "IGHG1",
+    "IGLV1-40",
+    "IGLV1-47",
+    "IGLV3-1",
+    "IGKV1-39",
+    "IGLV2-23",
+    "IGHJ4"
+  ],
+  "tmb_threshold_fda": 10.0,
+  "igkc_x_tmb_fisher_or_chi2": {
+    "chi2": 0.832,
+    "p": 0.3616
+  },
+  "group_sizes": {
+    "IGKC+TMB+": 73,
+    "IGKC+TMB-": 166,
+    "IGKC-TMB+": 63,
+    "IGKC-TMB-": 176
+  },
+  "median_os_days_by_group": {
+    "IGKC+TMB+": 2617.0,
+    "IGKC+TMB-": 1499.0,
+    "IGKC-TMB+": 2393.0,
+    "IGKC-TMB-": 1235.0
+  },
+  "logrank_extremes": {
+    "group_A": "IGKC+TMB+",
+    "group_B": "IGKC-TMB-",
+    "p": 0.028
+  },
+  "cox_2x2": {
+    "IGKC_hi": {
+      "coef": 0.0411,
+      "hr": 1.042,
+      "p": 0.7958
+    },
+    "TMB_hi": {
+      "coef": -0.4774,
+      "hr": 0.62,
+      "p": 0.0121
+    }
+  },
+  "cindex_IGKC_only": {
+    "c_index_test_mean_sd": [
+      0.6154,
+      0.0209
+    ],
+    "c_index_test_seeds": [
+      0.6501,
+      0.6062,
+      0.5849,
+      0.6216,
+      0.6368,
+      0.5937,
+      0.6109,
+      0.6008,
+      0.6117,
+      0.6374
+    ]
+  },
+  "cindex_TMB_only": {
+    "c_index_test_mean_sd": [
+      0.5931,
+      0.0294
+    ],
+    "c_index_test_seeds": [
+      0.5999,
+      0.6416,
+      0.5802,
+      0.6154,
+      0.5764,
+      0.5698,
+      0.5608,
+      0.5622,
+      0.6363,
+      0.5883
+    ]
+  },
+  "cindex_IGKC_plus_TMB": {
+    "c_index_test_mean_sd": [
+      0.6001,
+      0.0229
+    ],
+    "c_index_test_seeds": [
+      0.6118,
+      0.6072,
+      0.5677,
+      0.6216,
+      0.6306,
+      0.5696,
+      0.5833,
+      0.5812,
+      0.6062,
+      0.6218
+    ]
+  },
+  "cindex_IGKC_x_TMB": {
+    "c_index_test_mean_sd": [
+      0.6238,
+      0.0272
+    ],
+    "c_index_test_seeds": [
+      0.6442,
+      0.6577,
+      0.5741,
+      0.6562,
+      0.6291,
+      0.6359,
+      0.6147,
+      0.6101,
+      0.6256,
+      0.5899
+    ]
+  },
+  "interpretation": "IGKC and TMB are only weakly correlated (chi2 near independence). The combined IGKC+TMB grouping stratifies OS (median OS differs between extremes); whether the combination adds beyond each marker alone is judged by held-out C-index of Cox models with age+stage: individual markers, sum of z-scores, and 2x2 interaction terms."
+}

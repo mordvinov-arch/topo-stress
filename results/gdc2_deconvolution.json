@@ -1,0 +1,114 @@
+{
+  "method": "Marker-based NNLS deconvolution (CIBERSORT-style) to cell fractions",
+  "note": "Curated literature markers (~10 cell types), NOT full LM22 (unavailable here). Each gene z-scored across samples before NNLS; fractions normalized to sum 1.",
+  "sources": [
+    "Becht et al. 2016 (MCP-counter)",
+    "Bindea et al. 2013",
+    "standard immune markers"
+  ],
+  "signature_size": 107,
+  "markers_per_cell": {
+    "B_cells": 10,
+    "CD8_T": 10,
+    "CD4_T": 10,
+    "NK": 11,
+    "Mono_Macro": 15,
+    "DC": 9,
+    "Neutrophils": 10,
+    "Mast": 8,
+    "Endothelial": 10,
+    "Fibroblasts": 14
+  },
+  "nnls_fit_r2": {
+    "median": 0.157,
+    "q25": 0.022,
+    "frac_samples_r2_lt_0": 0.0
+  },
+  "mean_fractions_by_cell": {
+    "B_cells": 0.0999,
+    "CD8_T": 0.0827,
+    "CD4_T": 0.069,
+    "NK": 0.0667,
+    "Mono_Macro": 0.0834,
+    "DC": 0.0735,
+    "Neutrophils": 0.0763,
+    "Mast": 0.0862,
+    "Endothelial": 0.1099,
+    "Fibroblasts": 0.1209
+  },
+  "fraction_vs_score_correlation": {
+    "B_cells_vs_B_cells": 0.613,
+    "CD8_T_vs_Cytotoxic": 0.589,
+    "NK_vs_NK_cells": 0.276,
+    "Mono_Macro_vs_Monocytic": 0.476,
+    "DC_vs_Myeloid_DC": 0.393,
+    "Neutrophils_vs_Neutrophils": 0.206,
+    "Endothelial_vs_Endothelial": 0.411,
+    "Fibroblasts_vs_Fibroblasts": 0.555
+  },
+  "kruskal_p_by_cell": {
+    "B_cells": 0.0,
+    "CD8_T": 0.2482,
+    "CD4_T": 0.0003,
+    "NK": 0.0533,
+    "Mono_Macro": 0.1676,
+    "DC": 0.0,
+    "Neutrophils": 0.3059,
+    "Mast": 0.0001,
+    "Endothelial": 0.0,
+    "Fibroblasts": 0.2214
+  },
+  "median_fraction_by_physio": {
+    "B_cells": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "CD8_T": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "CD4_T": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "NK": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "Mono_Macro": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "DC": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "Neutrophils": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "Mast": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "Endothelial": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "Fibroblasts": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    }
+  },
+  "interpretation": "NNLS deconvolution with a curated ~107-marker signature (10 cell types) yields sum-to-1 fractions. Fractions correlate positively with the previous marker-based scores (sanity check). Deconvolved fractions differ significantly across physiotypes (Kruskal-Wallis p<0.001) for B_cells, CD4_T, DC, Mast and Endothelial: PH3 has the lowest B/DC/CD4 fractions. Directional (non-significant, KW p>0.05) mean trends: PH2 higher CD8_T and Mono_Macro means, PH3 higher Neutrophil and NK means. Caveats: marker-based reference (not full LM22), many fractions at zero (median 0), and modest NNLS fit (median R2=0.16), so fractions are semi-quantitative."
+}

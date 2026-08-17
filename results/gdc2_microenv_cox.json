@@ -1,0 +1,121 @@
+{
+  "method": "Multivariate Cox: physiotype + microenvironment (MCP-like) + mutations + stage",
+  "formula": "physio + age_years + stage_grp + T_cells_z + CD8_T_cells_z + Cytotoxic_z + B_cells_z + Monocytic_z + Fibroblasts_z + stroma_z + EMT_z + STK11 + KEAP1 + MET + TMB_log",
+  "n": 486,
+  "events": 177,
+  "c_index": 0.6751,
+  "summary": {
+    "physio": {
+      "coef": 0.025,
+      "hr": 1.026,
+      "ci95_low": 0.798,
+      "ci95_up": 1.318,
+      "p": 0.8432
+    },
+    "age_years": {
+      "coef": 0.014,
+      "hr": 1.014,
+      "ci95_low": 0.998,
+      "ci95_up": 1.031,
+      "p": 0.0966
+    },
+    "stage_grp[T.III/IV]": {
+      "coef": 0.831,
+      "hr": 2.295,
+      "ci95_low": 1.653,
+      "ci95_up": 3.186,
+      "p": 0.0
+    },
+    "stage_grp[T.NA]": {
+      "coef": -0.372,
+      "hr": 0.69,
+      "ci95_low": 0.164,
+      "ci95_up": 2.908,
+      "p": 0.6128
+    },
+    "T_cells_z": {
+      "coef": -0.418,
+      "hr": 0.658,
+      "ci95_low": 0.375,
+      "ci95_up": 1.155,
+      "p": 0.1449
+    },
+    "CD8_T_cells_z": {
+      "coef": 0.604,
+      "hr": 1.83,
+      "ci95_low": 0.928,
+      "ci95_up": 3.611,
+      "p": 0.0813
+    },
+    "Cytotoxic_z": {
+      "coef": -0.206,
+      "hr": 0.814,
+      "ci95_low": 0.465,
+      "ci95_up": 1.422,
+      "p": 0.469
+    },
+    "B_cells_z": {
+      "coef": -0.184,
+      "hr": 0.832,
+      "ci95_low": 0.652,
+      "ci95_up": 1.063,
+      "p": 0.1412
+    },
+    "Monocytic_z": {
+      "coef": -0.085,
+      "hr": 0.918,
+      "ci95_low": 0.728,
+      "ci95_up": 1.158,
+      "p": 0.4708
+    },
+    "Fibroblasts_z": {
+      "coef": 0.087,
+      "hr": 1.091,
+      "ci95_low": 0.655,
+      "ci95_up": 1.816,
+      "p": 0.739
+    },
+    "stroma_z": {
+      "coef": -0.043,
+      "hr": 0.958,
+      "ci95_low": 0.552,
+      "ci95_up": 1.662,
+      "p": 0.8788
+    },
+    "EMT_z": {
+      "coef": 0.249,
+      "hr": 1.282,
+      "ci95_low": 1.016,
+      "ci95_up": 1.619,
+      "p": 0.0367
+    },
+    "STK11": {
+      "coef": 0.377,
+      "hr": 1.458,
+      "ci95_low": 0.934,
+      "ci95_up": 2.276,
+      "p": 0.0966
+    },
+    "KEAP1": {
+      "coef": 0.115,
+      "hr": 1.122,
+      "ci95_low": 0.747,
+      "ci95_up": 1.686,
+      "p": 0.5781
+    },
+    "MET": {
+      "coef": -0.359,
+      "hr": 0.698,
+      "ci95_low": 0.297,
+      "ci95_up": 1.641,
+      "p": 0.4099
+    },
+    "TMB_log": {
+      "coef": -0.127,
+      "hr": 0.88,
+      "ci95_low": 0.724,
+      "ci95_up": 1.071,
+      "p": 0.2028
+    }
+  }
+}

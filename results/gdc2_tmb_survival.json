@@ -1,0 +1,65 @@
+{
+  "method": "TMB survival analysis with FDA threshold 10 mut/Mb",
+  "fda_threshold": 10.0,
+  "n": 478,
+  "n_events": 175,
+  "tmb_hi_count": 136,
+  "tmb_lo_count": 342,
+  "logrank_tmb_hi_vs_lo": 0.0142,
+  "median_os_days": {
+    "tmb_hi": 2393.0,
+    "tmb_lo": 1265.0
+  },
+  "cox_continuous": {
+    "age_years": {
+      "coef": 0.0081,
+      "hr": 1.008,
+      "p": 0.3031
+    },
+    "stage_III_IV": {
+      "coef": 0.9282,
+      "hr": 2.53,
+      "p": 0.0
+    },
+    "TMB_log": {
+      "coef": -0.0169,
+      "hr": 0.983,
+      "p": 0.8498
+    }
+  },
+  "cox_continuous_c_index": 0.6173,
+  "kruskal_tmb_by_physio": 1e-05,
+  "median_tmb_by_physio": {
+    "1": 1.74,
+    "2": 2.19,
+    "3": 2.32
+  },
+  "tmb_within_physio": {
+    "1": {
+      "n_hi": 63,
+      "n_lo": 246,
+      "logrank_p": 0.0197
+    },
+    "2": {
+      "n_hi": 55,
+      "n_lo": 76,
+      "logrank_p": 0.1166
+    },
+    "3": {
+      "n_hi": 18,
+      "n_lo": 20,
+      "logrank_p": 0.3253
+    }
+  },
+  "tmb_vs_immune_fractions": {
+    "B_cells": {
+      "rho": -0.045,
+      "p": 0.32845
+    },
+    "DC": {
+      "rho": -0.25,
+      "p": 0.0
+    }
+  },
+  "interpretation": "Unadjusted: TMB-high (>10 mut/Mb) shows better OS (log-rank p=0.014, median 2393 vs 1265 d). After adjusting for age+stage the TMB effect vanishes (Cox HR=0.98, p=0.85) - stage dominates. TMB differs across physiotypes (Kruskal-Wallis p=1e-5): PH3 (worst prognosis) carries the highest TMB. Within physiotypes, TMB-high is favorable in PH1 (log-rank p=0.02) and neutral in PH2/PH3. So TMB is not an independent prognostic factor in TCGA-LUAD; the physiotype carries more survival information (see nomogram)."
+}

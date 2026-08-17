@@ -83,13 +83,21 @@ def main():
         pd.to_numeric(merged["days_to_last_followup"], errors="coerce"))
     merged["event"] = (merged["vital_status"].astype(str).str.strip().str.lower()
                        .isin(["dead", "deceased"])).astype(int)
-    surv = merged[merged["tissue"] == "Tumor"]
+    surv = merged[merged["tissue"] == "Tumor"].drop_duplicates(subset="case_id", keep="first")
+    surv = surv.dropna(subset=["os_days"]).reset_index(drop=True)
+    from lifelines import KaplanMeierFitter
+    kmf = KaplanMeierFitter()
+    med = {}
+    for k, g in surv.groupby("physiotype"):
+        kmf.fit(g["os_days"].astype(float), g["event"].astype(int))
+        m = kmf.median_survival_time_
+        med[str(int(k))] = round(float(m), 0) if not np.isnan(m) else None
     res["survival_summary"] = {
-        "patients_with_os": int(surv["os_days"].notna().sum()),
+        "patients_with_os": int(len(surv)),
         "events": int(surv["event"].sum()),
         "per_physiotype": {
-            str(int(k)): {"n": int(g["os_days"].notna().sum()), "events": int(g["event"].sum()),
-                          "median_os_days": float(g["os_days"].median()) if g["os_days"].notna().any() else None}
+            str(int(k)): {"n": int(len(g)), "events": int(g["event"].sum()),
+                          "median_os_days": med[str(int(k))]}
             for k, g in surv.groupby("physiotype")
         },
     }

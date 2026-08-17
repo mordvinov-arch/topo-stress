@@ -1,0 +1,199 @@
+{
+  "method": "Per-gene OS (median split, log-rank) — 20 genes of the IGKC (lambda_max) module",
+  "n_patients": 507,
+  "n_events": 183,
+  "genes_missing": [],
+  "per_gene": [
+    {
+      "gene": "IGKC",
+      "n": 507,
+      "median_split": 0.2533,
+      "median_os_low": 1265.0,
+      "median_os_high": 1653.0,
+      "median_ratio_low_high": 0.765,
+      "logrank_p": 0.0362
+    },
+    {
+      "gene": "IGKV3-20",
+      "n": 507,
+      "median_split": 0.2265,
+      "median_os_low": 1492.0,
+      "median_os_high": 1516.0,
+      "median_ratio_low_high": 0.984,
+      "logrank_p": 0.3516
+    },
+    {
+      "gene": "IGKV1-5",
+      "n": 507,
+      "median_split": 0.1914,
+      "median_os_low": 1268.0,
+      "median_os_high": 1622.0,
+      "median_ratio_low_high": 0.782,
+      "logrank_p": 0.077
+    },
+    {
+      "gene": "IGKV3-11",
+      "n": 507,
+      "median_split": 0.2189,
+      "median_os_low": 1357.0,
+      "median_os_high": 1622.0,
+      "median_ratio_low_high": 0.837,
+      "logrank_p": 0.0357
+    },
+    {
+      "gene": "IGKV3-15",
+      "n": 507,
+      "median_split": 0.234,
+      "median_os_low": 1357.0,
+      "median_os_high": 1653.0,
+      "median_ratio_low_high": 0.821,
+      "logrank_p": 0.0426
+    },
+    {
+      "gene": "IGHV1-18",
+      "n": 507,
+      "median_split": 0.1684,
+      "median_os_low": 1379.0,
+      "median_os_high": 1653.0,
+      "median_ratio_low_high": 0.834,
+      "logrank_p": 0.3786
+    },
+    {
+      "gene": "IGLC2",
+      "n": 507,
+      "median_split": 0.2702,
+      "median_os_low": 1421.0,
+      "median_os_high": 1600.0,
+      "median_ratio_low_high": 0.888,
+      "logrank_p": 0.283
+    },
+    {
+      "gene": "IGHV5-51",
+      "n": 507,
+      "median_split": 0.1656,
+      "median_os_low": 1357.0,
+      "median_os_high": 1830.0,
+      "median_ratio_low_high": 0.742,
+      "logrank_p": 0.0551
+    },
+    {
+      "gene": "IGKJ1",
+      "n": 507,
+      "median_split": 0.2027,
+      "median_os_low": 1265.0,
+      "median_os_high": 1653.0,
+      "median_ratio_low_high": 0.765,
+      "logrank_p": 0.1379
+    },
+    {
+      "gene": "IGHV3-23",
+      "n": 507,
+      "median_split": 0.1681,
+      "median_os_low": 1421.0,
+      "median_os_high": 1653.0,
+      "median_ratio_low_high": 0.86,
+      "logrank_p": 0.3767
+    },
+    {
+      "gene": "IGHV4-59",
+      "n": 507,
+      "median_split": 0.1505,
+      "median_os_low": 1268.0,
+      "median_os_high": 1778.0,
+      "median_ratio_low_high": 0.713,
+      "logrank_p": 0.094
+    },
+    {
+      "gene": "IGKV4-1",
+      "n": 507,
+      "median_split": 0.23,
+      "median_os_low": 1421.0,
+      "median_os_high": 1516.0,
+      "median_ratio_low_high": 0.937,
+      "logrank_p": 0.3798
+    },
+    {
+      "gene": "IGHV3-21",
+      "n": 507,
+      "median_split": 0.116,
+      "median_os_low": 1268.0,
+      "median_os_high": 1653.0,
+      "median_ratio_low_high": 0.767,
+      "logrank_p": 0.1992
+    },
+    {
+      "gene": "IGHG1",
+      "n": 507,
+      "median_split": 0.251,
+      "median_os_low": 1357.0,
+      "median_os_high": 2027.0,
+      "median_ratio_low_high": 0.669,
+      "logrank_p": 0.0418
+    },
+    {
+      "gene": "IGLV1-40",
+      "n": 507,
+      "median_split": 0.2418,
+      "median_os_low": 1357.0,
+      "median_os_high": 1622.0,
+      "median_ratio_low_high": 0.837,
+      "logrank_p": 0.5237
+    },
+    {
+      "gene": "IGLV1-47",
+      "n": 507,
+      "median_split": 0.2112,
+      "median_os_low": 1454.0,
+      "median_os_high": 1531.0,
+      "median_ratio_low_high": 0.95,
+      "logrank_p": 0.8508
+    },
+    {
+      "gene": "IGLV3-1",
+      "n": 507,
+      "median_split": 0.2101,
+      "median_os_low": 1454.0,
+      "median_os_high": 1622.0,
+      "median_ratio_low_high": 0.896,
+      "logrank_p": 0.3486
+    },
+    {
+      "gene": "IGKV1-39",
+      "n": 507,
+      "median_split": 0.1179,
+      "median_os_low": 1492.0,
+      "median_os_high": 1516.0,
+      "median_ratio_low_high": 0.984,
+      "logrank_p": 0.6526
+    },
+    {
+      "gene": "IGLV2-23",
+      "n": 507,
+      "median_split": 0.151,
+      "median_os_low": 1379.0,
+      "median_os_high": 1622.0,
+      "median_ratio_low_high": 0.85,
+      "logrank_p": 0.2658
+    },
+    {
+      "gene": "IGHJ4",
+      "n": 507,
+      "median_split": 0.1315,
+      "median_os_low": 1268.0,
+      "median_os_high": 1830.0,
+      "median_ratio_low_high": 0.693,
+      "logrank_p": 0.0246
+    }
+  ],
+  "n_genes_p<0.05": 5,
+  "n_genes_p<0.005": 0,
+  "top_gene": {
+    "gene": "IGHJ4",
+    "n": 507,
+    "median_split": 0.1315,
+    "median_os_low": 1268.0,
+    "median_os_high": 1830.0,
+    "median_ratio_low_high": 0.693,
+    "logrank_p": 0.0246
+  }
+}

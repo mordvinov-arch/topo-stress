@@ -1,0 +1,222 @@
+{
+  "method": "Known literature signatures vs physiotypes (TCGA-LUAD)",
+  "n": 507,
+  "n_events": 183,
+  "genes_missing_per_signature": {
+    "Tcell_inflamed_GEP18_Ayers": [],
+    "Cytolytic_Rooney": [],
+    "IFNG_6": [],
+    "Bcell": [],
+    "Proliferation_Whitfield": [],
+    "Stromal_Yoshihara": [],
+    "Hypoxia_Buffa": [],
+    "EMT_Kalluri": [],
+    "Hallmark_Hypoxia": [],
+    "Hallmark_Interferon_Gamma_Response": [],
+    "Hallmark_E2F_Targets": [],
+    "Hallmark_Inflammatory_Response": [],
+    "Hallmark_Angiogenesis": []
+  },
+  "signatures": {
+    "Tcell_inflamed_GEP18_Ayers": {
+      "kruskal_p": 0.00191,
+      "median_by_physio": {
+        "1": 0.0919,
+        "2": -0.0573,
+        "3": -0.3966
+      },
+      "logrank_high_vs_low": 0.5429,
+      "cox_hr": 0.936,
+      "cox_ci": [
+        0.776,
+        1.129
+      ],
+      "cox_p": 0.4918
+    },
+    "Cytolytic_Rooney": {
+      "kruskal_p": 0.04009,
+      "median_by_physio": {
+        "1": 0.0334,
+        "2": -0.0158,
+        "3": -0.4078
+      },
+      "logrank_high_vs_low": 0.3661,
+      "cox_hr": 0.959,
+      "cox_ci": [
+        0.815,
+        1.129
+      ],
+      "cox_p": 0.6152
+    },
+    "IFNG_6": {
+      "kruskal_p": 0.0584,
+      "median_by_physio": {
+        "1": 0.0302,
+        "2": -0.0639,
+        "3": -0.344
+      },
+      "logrank_high_vs_low": 0.5025,
+      "cox_hr": 0.966,
+      "cox_ci": [
+        0.804,
+        1.16
+      ],
+      "cox_p": 0.7089
+    },
+    "Bcell": {
+      "kruskal_p": 0.0,
+      "median_by_physio": {
+        "1": 0.1792,
+        "2": -0.501,
+        "3": -1.022
+      },
+      "logrank_high_vs_low": 0.0007,
+      "cox_hr": 0.764,
+      "cox_ci": [
+        0.634,
+        0.92
+      ],
+      "cox_p": 0.0046
+    },
+    "Proliferation_Whitfield": {
+      "kruskal_p": 1e-05,
+      "median_by_physio": {
+        "1": -0.1245,
+        "2": 0.0586,
+        "3": 0.711
+      },
+      "logrank_high_vs_low": 0.001,
+      "cox_hr": 1.344,
+      "cox_ci": [
+        1.133,
+        1.594
+      ],
+      "cox_p": 0.0007
+    },
+    "Stromal_Yoshihara": {
+      "kruskal_p": 0.00268,
+      "median_by_physio": {
+        "1": 0.0559,
+        "2": -0.1092,
+        "3": -0.4519
+      },
+      "logrank_high_vs_low": 0.276,
+      "cox_hr": 1.096,
+      "cox_ci": [
+        0.936,
+        1.283
+      ],
+      "cox_p": 0.2557
+    },
+    "Hypoxia_Buffa": {
+      "kruskal_p": 0.04085,
+      "median_by_physio": {
+        "1": -0.1247,
+        "2": 0.0393,
+        "3": 0.1484
+      },
+      "logrank_high_vs_low": 0.0003,
+      "cox_hr": 1.747,
+      "cox_ci": [
+        1.383,
+        2.206
+      ],
+      "cox_p": 0.0
+    },
+    "EMT_Kalluri": {
+      "kruskal_p": 0.01422,
+      "median_by_physio": {
+        "1": 0.0475,
+        "2": -0.1258,
+        "3": -0.2351
+      },
+      "logrank_high_vs_low": 0.9182,
+      "cox_hr": 1.135,
+      "cox_ci": [
+        0.908,
+        1.419
+      ],
+      "cox_p": 0.2647
+    },
+    "Hallmark_Hypoxia": {
+      "kruskal_p": 0.00235,
+      "median_by_physio": {
+        "1": 0.0453,
+        "2": -0.0724,
+        "3": -0.1051
+      },
+      "logrank_high_vs_low": 0.0199,
+      "cox_hr": 1.721,
+      "cox_ci": [
+        1.115,
+        2.656
+      ],
+      "cox_p": 0.0141
+    },
+    "Hallmark_Interferon_Gamma_Response": {
+      "kruskal_p": 0.0,
+      "median_by_physio": {
+        "1": 0.0992,
+        "2": -0.1186,
+        "3": -0.3989
+      },
+      "logrank_high_vs_low": 0.5217,
+      "cox_hr": 1.064,
+      "cox_ci": [
+        0.805,
+        1.408
+      ],
+      "cox_p": 0.6615
+    },
+    "Hallmark_E2F_Targets": {
+      "kruskal_p": 0.00013,
+      "median_by_physio": {
+        "1": -0.1495,
+        "2": -0.0042,
+        "3": 0.4278
+      },
+      "logrank_high_vs_low": 0.0023,
+      "cox_hr": 1.42,
+      "cox_ci": [
+        1.136,
+        1.776
+      ],
+      "cox_p": 0.0021
+    },
+    "Hallmark_Inflammatory_Response": {
+      "kruskal_p": 0.0,
+      "median_by_physio": {
+        "1": 0.1077,
+        "2": -0.0727,
+        "3": -0.3116
+      },
+      "logrank_high_vs_low": 0.3732,
+      "cox_hr": 0.988,
+      "cox_ci": [
+        0.716,
+        1.365
+      ],
+      "cox_p": 0.9436
+    },
+    "Hallmark_Angiogenesis": {
+      "kruskal_p": 0.0,
+      "median_by_physio": {
+        "1": 0.0611,
+        "2": -0.093,
+        "3": -0.2046
+      },
+      "logrank_high_vs_low": 0.5455,
+      "cox_hr": 1.289,
+      "cox_ci": [
+        0.909,
+        1.828
+      ],
+      "cox_p": 0.1549
+    }
+  },
+  "physiotype_cox_reference": {
+    "c_index": 0.621
+  },
+  "best_signature_for_survival": "Hypoxia_Buffa",
+  "interpretation": "Published signatures (exact gene lists from the provided file) are evaluated against physiotypes: Kruskal-Wallis differences across physiotypes, and survival stratification by median split with Cox adjustment for age/stage. The physiotype Cox serves as a reference for discrimination. Signatures that are strongly physiotype-dependent overlap with the physiotype's biology (immune/stromal/proliferative)."
+}

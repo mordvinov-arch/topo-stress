@@ -30,7 +30,7 @@ def main():
     df["event"] = df["event"].astype(int)
 
     age = pd.to_numeric(df["age_at_initial_pathologic_diagnosis"], errors="coerce")
-    age = age.abs() / 365.25
+    age = age.abs()
     df["age_years"] = age
     df["stage_grp"] = df["stage_grp"].fillna("NA")
 
