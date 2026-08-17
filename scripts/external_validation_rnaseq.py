@@ -1,9 +1,11 @@
 # Внешняя RNA-seq валидация физиотипов и IGKC-сигнатуры: GSE81089 (Uppsala).
 #
 # Когорта: 199 NSCLC + 19 парных норм (Illumina HiSeq2500, FPKM cufflinks, Ensembl v73).
+# Table 1 (Djureinovic et al., JCI Insight 2016, doi:10.1172/jci.insight.86837):
+# аденокарцинома 108, плоскоклеточный 67, NOS 24; стадии IA70/IB45/IIA25/IIB23/IIIA33/IV3.
 # Выживаемость в series matrix GEO: OS = vital date - surgery date, событие = dead.
 # Гистология (коды GEO, верифицированы маркерами NKX2-1/SFTPA/NAPSA vs TP63/KRT5/KRT14):
-# code 1 = SCC (67), code 2 = adenocarcinoma/LUAD (108), code 3 = large cell (24).
+# code 1 = SCC (67), code 2 = adenocarcinoma/LUAD (108), code 3 = NOS (24) - совпадает с Table 1.
 # Первичный анализ — LUAD (histology=2), чувствительность — все NSCLC.
 #
 # Протокол:
@@ -214,8 +216,9 @@ def main():
     res = {
         "method": ("External RNA-seq validation on GSE81089 (Uppsala, 199 NSCLC + 19 normals, "
                    "Illumina HiSeq2500, cufflinks FPKM, Ensembl v73). Primary analysis on the LUAD "
-                   "subtype (histology code 2, verified by marker expression NKX2-1/SFTPA/NAPSA vs "
-                   "TP63/KRT5/KRT14; histology_marker_verification); sensitivity on all "
+                   "subtype (histology code 2; marker verification NKX2-1/SFTPA/NAPSA vs "
+                   "TP63/KRT5/KRT14 and Table 1 of Djureinovic et al. 2016 agree: 108 adenocarcinoma, "
+                   "67 SCC, 24 NOS); sensitivity on all "
                    "NSCLC. OS = vital date - surgery date, event = dead. Batch handling: per-gene "
                    "z-score within each dataset (ComBat/sva not available in the environment). "
                    "Physiotypes predicted by a TCGA-LUAD-trained RandomForest on 500 HVG (z-scored)."),
